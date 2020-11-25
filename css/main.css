@@ -1,8 +1,13 @@
 /*general rules*/
+@font-face
+{
+  font-family: 'Computer Modern';
+  src: url('./cmuntt.ttf')
+}
 *
 {
 background-color: #fffafa;
-font-family: "Montserrat"; 
+font-family: 'Computer Modern'; 
 font-style: normal;
 font-variant: normal; 
 color: #2b2d42;
