@@ -1,18 +1,48 @@
 /*general rules*/
 @font-face
 {
-  font-family: 'Computer Modern';
+  font-family: 'CMU';
   src: url('./cmunrm.ttf')
 }
+
+@font-face
+{
+  font-family: 'CMU_it';
+  src: url('./cmunsl.ttf')
+}
+
+@font-face
+{
+    font-family: 'CMU_mono';
+    src: url('./cmuntt.ttf')
+}
+
 *
 {
-background-color: #f2f2cb;
-font-family: 'Computer Modern'; 
+    /*#f2f2cb*/
+background-color: #ffffff;
+font-family: 'CMU'; 
 font-style: normal;
 font-variant: normal; 
-color: #2b2d42;
+color: #000000;
 letter-spacing: 0.02em;
 text-decoration: none;
+}
+
+i
+{
+font-style:italic;
+font-family:'CMU_it';
+}
+
+code
+{
+font-style:normal;
+font-family: 'CMU_mono';
+text-align: justify;
+font-size: 100%;
+line-height: 161.8%;
+font-weight: 200;
 }
 
 /*Article rules*/
@@ -43,10 +73,10 @@ line-height: 161.8%;
 
 h3.article
 {
-text-align: left;
+text-align: center;
 font-size: 250%;
 font-weight: bold; 
-line-height: 100%;
+line-height: 161.8%;
 }
 
 #poem.article
@@ -59,7 +89,7 @@ left: 5%;
 a.article
 {
 padding: 0;
-margin: 100px;
+margin: 50px;
 position: relative;
 left:auto;
 right: auto;
@@ -99,6 +129,13 @@ transform: rotate(-45deg) translate(-9px, 6px);
 transform: rotate(45deg) translate(-8px, -8px);
 }
 
+/* rules for images */
+.image{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /*rules for navigation */
 a.navigation
 {
@@ -118,18 +155,26 @@ display: inline;
 }
 /*rules for archive*/
 
+.archive
+{
+margin: auto;
+width: 70%;
+border: 15px;
+padding: 20px;
+}
+
 .tiny
 {
 text-align: center;
-font-size: 50%;
-line-height: 50%;
+font-size: 60%;
+line-height: 20%;
 font-weight: 200;
 }
 
 h3.archive
 {
 text-align: center;
-font-size: 250%;
+font-size: 161.8%;
 font-weight: bold; 
-line-height: 100%;
+line-height: 161.8%;
 }

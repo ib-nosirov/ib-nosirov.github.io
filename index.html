@@ -1,26 +1,26 @@
----
----
 <!DOCTYPE html>
 <html>
+
+<!--script head-->
+
 <head>
-  <title>Ibrohim Blog</title>
-  <link rel = "stylesheet" type="text/css" href = "css/main.css"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-  <link rel="stylesheet" type="text/css" 
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;900"/> 
+    <title>Ib-Nosirov</title>
+    <link rel = "stylesheet" type="text/css" href = "css/main.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
 </head>
 
-<!--body of the script-->
+<!--script body-->
 
 <body>
-  <!--Menu-->
-    <!--animation-->
-  <div class="container" onclick="myFunction(this)">
-    <div class="bar1"></div>
-    <div class="bar2"></div>
-    <div class="bar3"></div>
+    <!--Menu-->
+    <div class="container" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+        <nav>
+            <a class = "navigation" href = "about_me.html"> ABOUT ME</a>
+        </nav>
   </div>
-  
   <script>
     function myFunction(x)
     {
@@ -28,10 +28,16 @@
     }
   </script>
 
-  <h2 class = "article">
-    <a class = "article" href = "recent.html">RECENT</a>
-    <a class = "article" href = "archive.html">ARCHIVE</a>
-  </h2>
-
+    <h3 class = "archive">
+        <a href = "tikz.html">
+        <img 
+            class="image"
+            src="tex/my_fig.svg" 
+            alt="TikZ rendered diagram"
+            width="500"/>
+        PGF:Ti<i>k</i>Z
+        <p class = "tiny">26 November 2020</p>
+        </a>
+    </h3>
 </body>
 </html>
