@@ -8,7 +8,7 @@
 @font-face
 {
   font-family: 'CMU_it';
-  src: url('./cmunsl.ttf')
+  src: url('./cmunti.ttf')
 }
 
 @font-face
@@ -31,7 +31,7 @@ text-decoration: none;
 
 i
 {
-font-style:italic;
+font-style:normal;
 font-family:'CMU_it';
 }
 
