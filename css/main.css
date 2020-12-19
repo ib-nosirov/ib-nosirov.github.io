@@ -25,7 +25,7 @@ font-family: 'CMU';
 font-style: normal;
 font-variant: normal; 
 color: #000000;
-letter-spacing: 0.02em;
+letter-spacing: 0.01em;
 text-decoration: none;
 }
 
@@ -40,9 +40,8 @@ code
 font-style:normal;
 font-family: 'CMU_mono';
 text-align: justify;
-font-size: 100%;
-line-height: 161.8%;
-font-weight: 200;
+font-size: 1vw;
+line-height: 4vw;
 }
 
 /*Article rules*/
@@ -50,33 +49,32 @@ font-weight: 200;
 .article
 {
 margin: auto;
-width: 70%;
-border: 15px;
-padding: 50px;
+width: 70vw;
+border: 5vw;
+padding: 5vw;
 }
 
 p.article
 {
 text-align: justify;
-font-size: 161.8%;
-line-height: 223.6%;
-font-weight: 200;
+font-size: 2vw;
+line-height: 4vw;
 }
 
 h2.article
 {
 text-align: center;
-font-size: 323.6%; 
+font-size: 4vw; 
 font-weight: bold; 
-line-height: 161.8%; 
+line-height: 4vw; 
 }
 
 h3.article
 {
 text-align: center;
-font-size: 250%;
+font-size: 3vw;
 font-weight: bold; 
-line-height: 161.8%;
+line-height: 3vw;
 }
 
 #poem.article
