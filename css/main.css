@@ -17,81 +17,10 @@
     src: url('./cmuntt.ttf')
 }
 
-*
-{
-    /*#f2f2cb*/
-background-color: #ffffff;
-font-family: 'CMU'; 
-font-style: normal;
-font-variant: normal; 
-color: #000000;
-letter-spacing: 0.01em;
-text-decoration: none;
-}
-
 i
 {
 font-style:normal;
 font-family:'CMU_it';
-}
-
-code
-{
-font-style:normal;
-font-family: 'CMU_mono';
-text-align: justify;
-font-size: 1vw;
-line-height: 4vw;
-}
-
-/*Article rules*/
-
-.article
-{
-margin: auto;
-width: 70vw;
-border: 5vw;
-padding: 5vw;
-}
-
-p.article
-{
-text-align: justify;
-font-size: 2vw;
-line-height: 4vw;
-}
-
-h2.article
-{
-text-align: center;
-font-size: 4vw; 
-font-weight: bold; 
-line-height: 4vw; 
-}
-
-h3.article
-{
-text-align: center;
-font-size: 3vw;
-font-weight: bold; 
-line-height: 3vw;
-}
-
-#poem.article
-{
-position: relative;
-top: 10px;
-left: 5%;
-}
-
-a.article
-{
-padding: 0;
-margin: 50px;
-position: relative;
-left:auto;
-right: auto;
-top: 250px;
 }
 
 /*rules to build menu bar*/
@@ -106,25 +35,35 @@ background: rgba(76, 175, 80, 0.0);
 
 .bar1, .bar2, .bar3
 {
-width: 35px;
-height: 5px;
-background-color: #333;
-margin: 6px 0;
+width: 25px;
+height: 2px;
+background-color: #000;
+margin: 3px;
 transition: .1s;
 }
 
 .change .bar1 
 {
--webkit-transform: rotate(-45deg) translate(-9px, 6px);
-transform: rotate(-45deg) translate(-9px, 6px);
+-webkit-transform: rotate(-45deg) translate(0px, 7px);
 }
 
 .change .bar2 {opacity: 0;}
 
 .change .bar3
 {
--webkit-transform: rotate(45deg) translate(-8px, -8px);
-transform: rotate(45deg) translate(-8px, -8px);
+-webkit-transform: rotate(45deg) translate(0px, -7px);
+}
+
+*
+{
+    /*#f2f2cb*/
+background-color: #ffffff;
+font-family: 'CMU'; 
+font-style: normal;
+font-variant: normal; 
+color: #000000;
+letter-spacing: 0.01em;
+text-decoration: none;
 }
 
 /* rules for images */
@@ -135,13 +74,6 @@ transform: rotate(45deg) translate(-8px, -8px);
 }
 
 /*rules for navigation */
-a.navigation
-{
-font-size: 161.8%;
-font-weight: 200; 
-line-height: 100%;
-background-color: rgba(76, 175, 80, 0.0);
-}
 nav
 {
 display: none;
@@ -151,28 +83,286 @@ display: none;
 {
 display: inline;
 }
-/*rules for archive*/
-
-.archive
-{
-margin: auto;
-width: 70%;
-border: 15px;
-padding: 20px;
-}
 
 .tiny
 {
 text-align: center;
-font-size: 60%;
-line-height: 20%;
-font-weight: 200;
+font-size: 70%;
 }
 
-h3.archive
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) 
 {
-text-align: center;
-font-size: 161.8%;
-font-weight: bold; 
-line-height: 161.8%;
+    code
+    {
+    font-style:normal;
+    font-family: 'CMU_mono';
+    text-align: justify;
+    font-size: 18pt;
+    line-height: 4vw;
+    }
+
+    /*Article rules*/
+
+    .article
+    {
+    margin: auto;
+    width: 90%;
+    border: 5%;
+    padding: 5%;
+    }
+
+    p.article
+    {
+    text-align: justify;
+    font-size: 20px;
+    line-height: 200%;
+    }
+
+    h2.article
+    {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 200%;
+    }
+
+    h3.article
+    {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold; 
+    line-height: 200%;
+    }
+
+    a.article
+    {
+    padding: 0;
+    margin: 50px;
+    position: relative;
+    left:auto;
+    right: auto;
+    top: 250px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px)
+{
+    code
+    {
+    font-style:normal;
+    font-family: 'CMU_mono';
+    text-align: justify;
+    font-size: 2vw;
+    line-height: 4vw;
+    }
+
+    /*Article rules*/
+
+    .article
+    {
+    margin: auto;
+    width: 70vw;
+    border: 5vw;
+    padding: 5vw;
+    }
+
+    p.article
+    {
+    text-align: justify;
+    font-size: 2vw;
+    line-height: 3vw;
+    }
+
+    h2.article
+    {
+    text-align: center;
+    font-size: 4vw; 
+    font-weight: bold; 
+    line-height: 4vw; 
+    }
+
+    h3.article
+    {
+    text-align: center;
+    font-size: 3vw;
+    font-weight: bold; 
+    line-height: 3vw;
+    }
+
+    a.article
+    {
+    padding: 0;
+    margin: 50px;
+    position: relative;
+    left:auto;
+    right: auto;
+    top: 250px;
+    }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px)
+{
+    code
+    {
+    font-style:normal;
+    font-family: 'CMU_mono';
+    text-align: justify;
+    font-size: 2vw;
+    line-height: 4vw;
+    }
+
+    /*Article rules*/
+
+    .article
+    {
+    margin: auto;
+    width: 70vw;
+    border: 5vw;
+    padding: 5vw;
+    }
+
+    p.article
+    {
+    text-align: justify;
+    font-size: 2vw;
+    line-height: 3vw;
+    }
+
+    h2.article
+    {
+    text-align: center;
+    font-size: 4vw; 
+    font-weight: bold; 
+    line-height: 4vw; 
+    }
+
+    h3.article
+    {
+    text-align: center;
+    font-size: 3vw;
+    font-weight: bold; 
+    line-height: 3vw;
+    }
+
+    a.article
+    {
+    padding: 0;
+    margin: 50px;
+    position: relative;
+    left:auto;
+    right: auto;
+    top: 250px;
+    }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) 
+{
+    code
+    {
+    font-style:normal;
+    font-family: 'CMU_mono';
+    text-align: justify;
+    font-size: 2vw;
+    line-height: 4vw;
+    }
+
+    /*Article rules*/
+
+    .article
+    {
+    margin: auto;
+    width: 70vw;
+    border: 5vw;
+    padding: 5vw;
+    }
+
+    p.article
+    {
+    text-align: justify;
+    font-size: 2vw;
+    line-height: 3vw;
+    }
+
+    h2.article
+    {
+    text-align: center;
+    font-size: 4vw; 
+    font-weight: bold; 
+    line-height: 4vw; 
+    }
+
+    h3.article
+    {
+    text-align: center;
+    font-size: 3vw;
+    font-weight: bold; 
+    line-height: 3vw;
+    }
+
+    a.article
+    {
+    padding: 0;
+    margin: 50px;
+    position: relative;
+    left:auto;
+    right: auto;
+    top: 250px;
+    }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) 
+{
+    code
+    {
+    font-style:normal;
+    font-family: 'CMU_mono';
+    text-align: justify;
+    font-size: 2vw;
+    line-height: 4vw;
+    }
+
+    /*Article rules*/
+
+    .article
+    {
+    margin: auto;
+    width: 70vw;
+    border: 5vw;
+    padding: 5vw;
+    }
+
+    p.article
+    {
+    text-align: justify;
+    font-size: 2vw;
+    line-height: 3vw;
+    }
+
+    h2.article
+    {
+    text-align: center;
+    font-size: 4vw; 
+    font-weight: bold; 
+    line-height: 4vw; 
+    }
+
+    h3.article
+    {
+    text-align: center;
+    font-size: 3vw;
+    font-weight: bold; 
+    line-height: 3vw;
+    }
+
+    a.article
+    {
+    padding: 0;
+    margin: 50px;
+    position: relative;
+    left:auto;
+    right: auto;
+    top: 250px;
+    }
 }
