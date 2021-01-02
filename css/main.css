@@ -19,8 +19,7 @@
 
 i
 {
-font-style:normal;
-font-family:'CMU_it';
+font-style:italic;
 }
 
 /*rules to build menu bar*/
@@ -105,7 +104,7 @@ font-size: 70%;
     font-style:normal;
     font-family: 'CMU_mono';
     text-align: justify;
-    font-size: 14pt;
+    font-size: 12pt;
     line-height: 200%;
     }
 
@@ -122,7 +121,7 @@ font-size: 70%;
     p.article
     {
     text-align: justify;
-    font-size: 14pt;
+    font-size: 12pt;
     line-height: 200%;
     }
 
@@ -161,7 +160,7 @@ font-size: 70%;
     font-style:normal;
     font-family: 'CMU_mono';
     text-align: justify;
-    font-size: 14pt;
+    font-size: 12pt;
     line-height: 200%;
     }
 
@@ -178,7 +177,7 @@ font-size: 70%;
     p.article
     {
     text-align: justify;
-    font-size: 14pt;
+    font-size: 12pt;
     line-height: 200%;
     }
 
@@ -216,7 +215,7 @@ font-size: 70%;
     font-style:normal;
     font-family: 'CMU_mono';
     text-align: justify;
-    font-size: 14pt;
+    font-size: 12pt;
     line-height: 200%;
     }
 
@@ -233,7 +232,7 @@ font-size: 70%;
     p.article
     {
     text-align: justify;
-    font-size: 14pt;
+    font-size: 12pt;
     line-height: 200%;
     }
 
@@ -271,7 +270,7 @@ font-size: 70%;
     font-style:normal;
     font-family: 'CMU_mono';
     text-align: justify;
-    font-size: 14pt;
+    font-size: 12pt;
     line-height: 200%;
     }
 
@@ -288,7 +287,7 @@ font-size: 70%;
     p.article
     {
     text-align: justify;
-    font-size: 14pt;
+    font-size: 12pt;
     line-height: 200%;
     }
 
@@ -326,7 +325,7 @@ font-size: 70%;
     font-style:normal;
     font-family: 'CMU_mono';
     text-align: justify;
-    font-size: 14pt;
+    font-size: 12pt;
     line-height: 200%;
     }
 
@@ -343,7 +342,7 @@ font-size: 70%;
     p.article
     {
     text-align: justify;
-    font-size: 14pt;
+    font-size: 12pt;
     line-height: 200%;
     }
 
