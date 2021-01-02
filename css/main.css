@@ -2,13 +2,13 @@
 @font-face
 {
   font-family: 'CMU';
-  src: url('./cmunrm.ttf')
+  src: url('./cmunbmr.ttf')
 }
 
 @font-face
 {
   font-family: 'CMU_it';
-  src: url('./cmunti.ttf')
+  src: url('./cmunbmo.ttf')
 }
 
 @font-face
@@ -62,8 +62,13 @@ font-family: 'CMU';
 font-style: normal;
 font-variant: normal; 
 color: #000000;
-letter-spacing: -1px;
+letter-spacing: 0px;
 text-decoration: none;
+}
+
+.tab 
+{
+margin-left: 40px;
 }
 
 /* rules for images */
@@ -100,7 +105,7 @@ font-size: 70%;
     font-style:normal;
     font-family: 'CMU_mono';
     text-align: justify;
-    font-size: 18pt;
+    font-size: 14pt;
     line-height: 200%;
     }
 
@@ -110,14 +115,14 @@ font-size: 70%;
     {
     margin: auto;
     width: 90%;
-    border: 5%;
-    padding: 5%;
+    border: 5px;
+    padding: 5px;
     }
 
     p.article
     {
     text-align: justify;
-    font-size: 17pt;
+    font-size: 14pt;
     line-height: 200%;
     }
 
@@ -156,7 +161,7 @@ font-size: 70%;
     font-style:normal;
     font-family: 'CMU_mono';
     text-align: justify;
-    font-size: 17pt;
+    font-size: 14pt;
     line-height: 200%;
     }
 
@@ -166,14 +171,14 @@ font-size: 70%;
     {
     margin: auto;
     width: 90%;
-    border: 5%;
-    padding: 5%;
+    border: 5px;
+    padding: 5px;
     }
 
     p.article
     {
     text-align: justify;
-    font-size: 17pt;
+    font-size: 14pt;
     line-height: 200%;
     }
 
@@ -211,7 +216,7 @@ font-size: 70%;
     font-style:normal;
     font-family: 'CMU_mono';
     text-align: justify;
-    font-size: 17pt;
+    font-size: 14pt;
     line-height: 200%;
     }
 
@@ -220,15 +225,15 @@ font-size: 70%;
     .article
     {
     margin: auto;
-    width: 85%;
-    border: 5%;
-    padding: 5%;
+    width: 650px;
+    border: 5px;
+    padding: 5px;
     }
 
     p.article
     {
     text-align: justify;
-    font-size: 17pt;
+    font-size: 14pt;
     line-height: 200%;
     }
 
@@ -266,7 +271,7 @@ font-size: 70%;
     font-style:normal;
     font-family: 'CMU_mono';
     text-align: justify;
-    font-size: 21pt;
+    font-size: 14pt;
     line-height: 200%;
     }
 
@@ -275,22 +280,22 @@ font-size: 70%;
     .article
     {
     margin: auto;
-    width: 960px;
-    border: 15px;
-    padding: 15px;
+    width: 650px;
+    border: 5px;
+    padding: 5px;
     }
 
     p.article
     {
     text-align: justify;
-    font-size: 21pt;
+    font-size: 14pt;
     line-height: 200%;
     }
 
     h2.article
     {
     text-align: center;
-    font-size: 30pt;
+    font-size: 24pt;
     line-height: 200%;
     font-weight: bold; 
     }
@@ -298,7 +303,7 @@ font-size: 70%;
     h3.article
     {
     text-align: center;
-    font-size: 27pt;
+    font-size: 21pt;
     line-height: 200%;
     font-weight: bold; 
     }
@@ -321,7 +326,7 @@ font-size: 70%;
     font-style:normal;
     font-family: 'CMU_mono';
     text-align: justify;
-    font-size: 21pt;
+    font-size: 14pt;
     line-height: 200%;
     }
 
@@ -330,22 +335,22 @@ font-size: 70%;
     .article
     {
     margin: auto;
-    width: 960px;
-    border: 60px;
-    padding: 60px;
+    width: 650px;
+    border: 5px;
+    padding: 5px;
     }
 
     p.article
     {
     text-align: justify;
-    font-size: 21pt;
+    font-size: 14pt;
     line-height: 200%;
     }
 
     h2.article
     {
     text-align: center;
-    font-size: 30pt;
+    font-size: 24pt;
     line-height: 200%;
     font-weight: bold; 
     }
@@ -353,7 +358,7 @@ font-size: 70%;
     h3.article
     {
     text-align: center;
-    font-size: 27pt;
+    font-size: 21pt;
     line-height: 200%;
     font-weight: bold; 
     }
