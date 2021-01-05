@@ -1,99 +1,63 @@
 <!DOCTYPE html>
 <html>
-
-<!--script head-->
-
 <head>
-  <title>Ib-Nosirov</title>
-  <link rel="stylesheet" type="text/css" href="css/main.css"/>
-  <meta name="viewport" content="width=max-device-width, initial-scale=1.0">
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <title>ib-nosirov.github.io</title>
+        <link rel="stylesheet" type="text/css" href="css/article.css"/>
 </head>
-
-<!--script body-->
-
 <body>
-    <!--Menu-->
-    <div class="container" onclick="myFunction(this)">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-        <nav>
-            <a class = "navigation" href="index.html">HOME |</a>
-            <a class = "navigation" href = "about_me.html"> ABOUT ME</a>
-        </nav>
-    </div> 
-    <script>
-        function myFunction(x)
-        {
-            x.classList.toggle("change");  
-        }
-    </script>
-
-    <h2 class = "article"> Structure of a Block Diagram Using TikZ</h2>
-    <h3 class="article"><p class="tiny"><time>26 November 2020</time></p></h3>
-    <p class = "article">
-TikZ is a front-end package that relies on the math engine PGF to serve as an
-API in rendering visualizations using LaTeX. Researchers often use TikZ to
-render visuals in scientific papers because the internal engine precisely
-organizes the spacing of diagram elements without explicit instruction. This
-abstraction leaves us with a rather large collection of knobs and dials. How we
-choose to organize these knobs and dials is determined by the kind of
-visualization we wish to render and block diagrams are just one of many such
-renderings.
-    </p>
-
-<p class="article">
-<br>What we are building to:
-<br>\(\circ\) How to organize a TikZ picture for block diagrams.
-<br>\(\circ\) How to use the TikZ preamble styles to for modularity.
-<br>\(\circ\) Pseudocode outline of the below block diagram.
+        <h3><a href="index.html">HOME</a></h3>
+        <h2> Structure of a Block Diagram Using TikZ</h2>
+                <h3>26 November 2020</h3>
+<p>
+What we are building to:
+<ul>
+        <li>How to organize a TikZ picture for block diagrams.</li>
+        <li>How to use TikZ preamble styles for improved modularity.</li>
+        <li>Pseudocode outline of an example diagram.</li>
+</ul>
 </p>
-        <img 
-            class="image"
-            src="tex/my_fig.svg" 
-            alt="TikZ rendered diagram"
-            width="650"/>
-    <p class="article">
-We will first establish a rough outline and further refine it by introducing
-new knobs and dials (features). We can see some recurring elements like
-different colored boxes and arrows connecting those boxes, so figuring out how
-to define these objects might be a good start. Just like the TeX preamble, TikZ
-has a header-like section where we can declare and stylize new objects, called
-nodes.  It is particularly useful to encapsulate as many of the repeating
-elements here as possible. Next, we consider the placement of elements. TikZ
-uses a grid with 1cm steps to determine the placement of all elements. These
-same coordinates can also be used to guide the paths of arrows and Bezier
-curves. Consider the following diagram:
-    </p>
-<img
-        class="image"
-        src="tex/grid.svg"
-        alt="TikZ grid"
-        width="650"/>
-<p class="article">
-Now consider the source code used to render this grid: 
-<code>
-        <br>\begin{tikzpicture}
-        <br>________\draw[step=1cm,gray,very thin] (-5,5) grid (5,5);
-        <br>________\filldraw [gray] (0,0) circle (2pt);
-        <br>________\node[label={south:node at (0,0)}] (origin) at (0,0) {};
-        <br>________\node[label={east:2cm arrow from (0,0) to (0,2)}]
-        <br>____________________(f_step) at (0.5,1) {};
-        <br>________\draw[->] (origin) -> (0,2);
-        <br>\end{tikzpicture}
-</code>
+<p>
+TikZ is a front-end package that relies on the PGF math engine to render TeX
+diagrams. Researchers often use TikZ in publications because it precisely
+organizes diagram elements without explicit instruction. This abstraction
+produces a rather large collection of features. We will extensively discuss a
+small subset of these knobs and dials as they pertain to one type of
+visualization: the block diagram.
 </p>
-<p class="article">
+<img src="tex/my_fig.svg" />
+<p>
+A block diagram consists mostly of stylized <code>\node</code> tags organized
+on slightly more abstract grid system. TikZ uses a 1cm-unit coordinate system
+to place and navigate between items. Often times, such an item is referred to
+by a <code>\node</code> tag, which by itself does not render anything, but can
+be styled into almost any shape. <code>\node</code>'s allow for many
+modifications, as seen in the below example.
+</p>
+<img src="tex/grid.svg" alt="TikZ grid" width="650">
+<figcaption>A grid similar to the one used by the TikZ backend. Nodes on the
+        grid may be aliased, and those aliases used to link coordinates as well
+        as other aliases together with arrows. Nodes can also be anchored with
+        text.</figcaption>
+<pre>
+        <code>
+\begin{tikzpicture}
+        \draw[step=1cm,gray,very thin] (-5,5) grid (5,5);
+        \filldraw [gray] (0,0) circle (2pt);
+        \node[label={south:node at (0,0)}] (origin) at (0,0) {};
+        \node[label={east:2cm arrow from (0,0) to (0,2)}] (f_step) at (0.5,1) {
+        };
+        \draw[->] (origin) -> (0,2);
+\end{tikzpicture}
+        </code>
+</pre>
+<p>
 We first render a 5x5 grid with 1cm steps. Every element, whether it is
- <code> \draw </code> or <code>\node</code>, is plotted on TikZ's grid, we get
+ <code>\draw</code> or <code>\node</code>, is plotted on TikZ's grid, we get
  a grid at (0,0) and since we choose 1cm ticks, the grid overlaps entirely with
  the grid TikZ is using in its calculations (Note, this generated grid is not
  the grid TikZ is using; it's only rendered this way to illustrate a point). On
  the second line, we specify the location of a point using the (0,0) coordinate
- system. We then specify a <code> \node </code> element, which by itself does
+ system. We then specify a <code>\node</code> element, which by itself does
  not display anything, rather it serves as a pointer that we can style with
  different elements (i.e. green rectangles or blue squares). Here we anchor a
  piece of text at the bottom of the node using the <code> label </code> tag.
@@ -101,62 +65,54 @@ We first render a 5x5 grid with 1cm steps. Every element, whether it is
  also alias nodes with meaningful names, such as <code>origin</code>, which
  makes it easier to refer to them when need their position. Nodes can also be
  used to strategically add text to a diagram without interrupting the visuals.
-</p>
-
-<p class="article">
+                        </p>
+                        <p>
 Using nodes and the grid, we can begin to outline how to build the diagram:
-<br> 1. Define a node for each element in the diagram.
-<br> 2. Anchor the necessary nodes with text.
-<br> 3. Style each node.
-</p>
-
-<p class="article">
+<ol>
+        <li>Define a node for each element in the diagram.</li>
+        <li>Anchor the necessary nodes with text.</li>
+        <li>Style each node.</li>
+</ol>
+                        </p>
+                        <p>
 This process is likely to be very tedious and could probably be streamlined
 using <code>for</code> loops, which TikZ provides, and a way to predefine the
 style of frequently used elements. We define styles for nodes in the so-called
 preamble of a TikZ 'picture':
-<code>
-        <br>\begin{tikzpicture} [
-        <br>________squares/.style 2 args={
-        <br>________________rectangle split,
-        <br>________________rectangle split horizontal,
-        <br>________________draw=#2,
-        <br>________________rectangle split parts=#1,
-        <br>________________fill=#2!20,
-        <br>________________outer sep=1mm},
-        <br>________cell/.style{
-        <br>________________align=center,
-        <br>________________rectangle,
-        <br>________________rounded corners=5mm,
-        <br>________________draw=green,
-        <br>________________fill=green!20,
-        <br>________________inner sep=5mm,
-        <br>________________outer sep=1mm}]
-        <br>.
-        <br>.
-        <br>.
-</code>
-</p>
-<p class="article">
+                        </p>
+<pre>
+        <code>
+\begin{tikzpicture} [
+        squares/.style 2 args={
+        rectangle split,
+        rectangle split horizontal,
+        draw=#2,
+        rectangle split parts=#1,
+        fill=#2!20,
+        outer sep=1mm},
+
+        cell/.style{
+        align=center,
+        rectangle,
+        rounded corners=5mm,
+        draw=green,
+        fill=green!20,
+        inner sep=5mm,
+        outer sep=1mm}]
+        </code>
+</pre>
+                        <p>
 Armed with the ability to predefine node styles and loops, we can now create
 a final create a detailed outline of this diagram:
-<code>
-        <br>1. Predefine what squares and cells (as referred to in LSTM models)
-        will look like.
-        <br>2. Create a 'for' loop to copy the first three columns, moving
-        everything a fixed amount each iteration (arrows included).
-        <br>3. Repeat the code for the somewhat unique 4th and 5th columns
-        (arrows included).
-        <br>4. Create the top portion of the diagram (arrows included).
-</code>
-I mentioned including arrows with the nodes because it is easier to look for
-missing items when items close to each other in the figure are also close to
-each other in the source code.
-</p>
-<p class="article">
-We can organize the code for TikZ diagrams in a number of ways but I find that
-Object Oriented organization can be extremely useful in rendering block
-diagrams.
-</p>
+<ol>
+        <li>Predefine what squares and cells (as referred to in LSTM models)
+                will look like.</li>
+        <li>Create a 'for' loop to copy the first three columns, moving
+                everything a fixed amount each iteration (arrows
+                included).</li>
+        <li>Repeat the code for the somewhat unique 4th and 5th columns
+                (arrows included).</li>
+        <li>Create the top portion of the diagram (arrows included).</li>
+</ol>
 </body>
 </html>

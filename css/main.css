@@ -1,20 +1,7 @@
-/*general rules*/
 @font-face
 {
-  font-family: 'CMU';
-  src: url('./cmunbmr.ttf')
-}
-
-@font-face
-{
-  font-family: 'CMU_it';
-  src: url('./cmunbmo.ttf')
-}
-
-@font-face
-{
-    font-family: 'CMU_mono';
-    src: url('./cmuntt.ttf')
+font-family: 'Inter';
+src: url("Inter-Regular.woff");
 }
 
 i
@@ -22,353 +9,37 @@ i
 font-style:italic;
 }
 
-/*rules to build menu bar*/
-
-.container
-{
-position: fixed;
-display: inline-block;
-cursor: pointer;
-background: rgba(76, 175, 80, 0.0);
-}
-
-.bar1, .bar2, .bar3
-{
-width: 25px;
-height: 2px;
-background-color: #000;
-margin: 3px;
-transition: .1s;
-}
-
-.change .bar1 
-{
--webkit-transform: rotate(-45deg) translate(0px, 7px);
-}
-
-.change .bar2 {opacity: 0;}
-
-.change .bar3
-{
--webkit-transform: rotate(45deg) translate(0px, -7px);
-}
-
 *
 {
-    /*#f2f2cb*/
-background-color: #ffffff;
-font-family: 'CMU'; 
-font-style: normal;
-font-variant: normal; 
+font-family: 'Inter', 'Helvetica Neue'; 
 color: #000000;
-letter-spacing: 0px;
+text-align: center;
+margin: auto;
+width: 640px;
+padding: 10px;
+}
+
+img
+{
+display: block;
+width: 100px;
+border: 10px;
+padding: 20px;
+}
+
+h2
+{
+font-size: 17pt;
+}
+
+h3
+{
+font-size: 14pt;
+}
+
+a
+{
+padding: 0px;
 text-decoration: none;
 }
 
-.tab 
-{
-margin-left: 40px;
-}
-
-/* rules for images */
-.image{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/*rules for navigation */
-nav
-{
-text-align: left;
-display: none;
-}
-
-.change nav
-{
-text-align: left;
-display: inline;
-}
-
-.tiny
-{
-text-align: center;
-font-size: 70%;
-}
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) 
-{
-    code
-    {
-    font-style:normal;
-    font-family: 'CMU_mono';
-    text-align: justify;
-    font-size: 12pt;
-    line-height: 200%;
-    }
-
-    /*Article rules*/
-
-    .article
-    {
-    margin: auto;
-    width: 90%;
-    border: 5px;
-    padding: 5px;
-    }
-
-    p.article
-    {
-    text-align: justify;
-    font-size: 12pt;
-    line-height: 200%;
-    }
-
-    h2.article
-    {
-    text-align: center;
-    font-size: 17pt;
-    font-weight: bold;
-    line-height: 200%;
-    }
-
-    h3.article
-    {
-    text-align: center;
-    font-size: 17pt;
-    font-weight: bold; 
-    line-height: 200%;
-    }
-
-    a.article
-    {
-    padding: 0;
-    margin: 50px;
-    position: relative;
-    left:auto;
-    right: auto;
-    top: 250px;
-    }
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px)
-{
-    code
-    {
-    font-style:normal;
-    font-family: 'CMU_mono';
-    text-align: justify;
-    font-size: 12pt;
-    line-height: 200%;
-    }
-
-    /*Article rules*/
-
-    .article
-    {
-    margin: auto;
-    width: 90%;
-    border: 5px;
-    padding: 5px;
-    }
-
-    p.article
-    {
-    text-align: justify;
-    font-size: 12pt;
-    line-height: 200%;
-    }
-
-    h2.article
-    {
-    text-align: center;
-    font-size: 21pt; 
-    font-weight: bold; 
-    line-height: 200%; 
-    }
-
-    h3.article
-    {
-    text-align: center;
-    font-size: 17pt;
-    font-weight: bold; 
-    line-height: 200%;
-    }
-
-    a.article
-    {
-    padding: 0;
-    margin: 50px;
-    position: relative;
-    left:auto;
-    right: auto;
-    top: 250px;
-    }
-}
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px)
-{
-    code
-    {
-    font-style:normal;
-    font-family: 'CMU_mono';
-    text-align: justify;
-    font-size: 12pt;
-    line-height: 200%;
-    }
-
-    /*Article rules*/
-
-    .article
-    {
-    margin: auto;
-    width: 650px;
-    border: 5px;
-    padding: 5px;
-    }
-
-    p.article
-    {
-    text-align: justify;
-    font-size: 12pt;
-    line-height: 200%;
-    }
-
-    h2.article
-    {
-    text-align: center;
-    font-size: 24pt;
-    line-height: 200%;
-    font-weight: bold; 
-    }
-
-    h3.article
-    {
-    text-align: center;
-    font-size: 21pt;
-    line-height: 200%;
-    font-weight: bold; 
-    }
-
-    a.article
-    {
-    padding: 0;
-    margin: 50px;
-    position: relative;
-    left:auto;
-    right: auto;
-    top: 250px;
-    }
-}
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) 
-{
-    code
-    {
-    font-style:normal;
-    font-family: 'CMU_mono';
-    text-align: justify;
-    font-size: 12pt;
-    line-height: 200%;
-    }
-
-    /*Article rules*/
-
-    .article
-    {
-    margin: auto;
-    width: 650px;
-    border: 5px;
-    padding: 5px;
-    }
-
-    p.article
-    {
-    text-align: justify;
-    font-size: 12pt;
-    line-height: 200%;
-    }
-
-    h2.article
-    {
-    text-align: center;
-    font-size: 24pt;
-    line-height: 200%;
-    font-weight: bold; 
-    }
-
-    h3.article
-    {
-    text-align: center;
-    font-size: 21pt;
-    line-height: 200%;
-    font-weight: bold; 
-    }
-
-    a.article
-    {
-    padding: 0;
-    margin: 50px;
-    position: relative;
-    left:auto;
-    right: auto;
-    top: 250px;
-    }
-}
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) 
-{
-    code
-    {
-    font-style:normal;
-    font-family: 'CMU_mono';
-    text-align: justify;
-    font-size: 12pt;
-    line-height: 200%;
-    }
-
-    /*Article rules*/
-
-    .article
-    {
-    margin: auto;
-    width: 650px;
-    border: 5px;
-    padding: 5px;
-    }
-
-    p.article
-    {
-    text-align: justify;
-    font-size: 12pt;
-    line-height: 200%;
-    }
-
-    h2.article
-    {
-    text-align: center;
-    font-size: 24pt;
-    line-height: 200%;
-    font-weight: bold; 
-    }
-
-    h3.article
-    {
-    text-align: center;
-    font-size: 21pt;
-    line-height: 200%;
-    font-weight: bold; 
-    }
-
-    a.article
-    {
-    padding: 0;
-    margin: 50px;
-    position: relative;
-    left:auto;
-    right: auto;
-    top: 250px;
-    }
-}
