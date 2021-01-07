@@ -44,8 +44,8 @@ modifications, as seen in the below example.
         \draw[step=1cm,gray,very thin] (-5,5) grid (5,5);
         \filldraw [gray] (0,0) circle (2pt);
         \node[label={south:node at (0,0)}] (origin) at (0,0) {};
-        \node[label={east:2cm arrow from (0,0) to (0,2)}] (f_step) at (0.5,1) {
-        };
+        \node[label={east:2cm arrow from (0,0) to (0,2)}] 
+                (f_step) at (0.5,1) {};
         \draw[->] (origin) -> (0,2);
 \end{tikzpicture}
         </code>
@@ -60,7 +60,7 @@ We first render a 5x5 grid with 1cm steps. Every element, whether it is
  system. We then specify a <code>\node</code> element, which by itself does
  not display anything, rather it serves as a pointer that we can style with
  different elements (i.e. green rectangles or blue squares). Here we anchor a
- piece of text at the bottom of the node using the <code> label </code> tag.
+ piece of text at the bottom of the node using the <code> label</code> tag.
  Notice how we never had to specify the relative placement of the text. We can
  also alias nodes with meaningful names, such as <code>origin</code>, which
  makes it easier to refer to them when need their position. Nodes can also be

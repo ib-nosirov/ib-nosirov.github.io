@@ -1,0 +1,305 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Header material
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath,amssymb,booktabs,mathtools}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Table options
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{pgfplotstable}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Algorithm2e
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[algo2e, lined, vlined, linesnumbered, english]{algorithm2e}
+\newcommand\mycommfont[1]{{\itshape #1}}
+\SetCommentSty{mycommfont}
+\SetKwComment{Comment}{}{}
+\SetKwInOut{Input}{Input}
+\SetKwInOut{Output}{Output}
+\SetKwInOut{Return}{Return}
+\SetKwRepeat{Do}{do}{while}
+\SetKwFor{Until}{until}{do}{}
+\SetKwProg{Function}{Function}{}{}
+\SetKwProg{Try}{try}{:}{}
+\SetKwProg{Catch}{catch}{:}{}
+\SetSideCommentRight	% Push comments to far right
+\SetKwComment{comment}{}{}
+\renewcommand\AlCapSty{\textsc}
+\renewcommand\AlCapFnt{\footnotesize}
+\renewcommand\AlCapNameFnt{\itshape\footnotesize}
+\renewcommand\AlFnt{\small}
+\SetAlCapSkip{1pc}
+
+% Use widechecks 
+% https://tex.stackexchange.com/questions/44235/is-there-a-way-to-do-an-upside-down-widehat
+%% code from mathabx.sty and mathabx.dcl
+\DeclareFontFamily{U}{mathx}{\hyphenchar\font45}
+\DeclareFontShape{U}{mathx}{m}{n}{
+      <5> <6> <7> <8> <9> <10>
+      <10.95> <12> <14.4> <17.28> <20.74> <24.88>
+      mathx10
+      }{}
+\DeclareSymbolFont{mathx}{U}{mathx}{m}{n}
+\DeclareFontSubstitution{U}{mathx}{m}{n}
+\DeclareMathAccent{\widecheck}{0}{mathx}{"71}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Math options
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%https://tex.stackexchange.com/questions/22278/palatino-roman-chi-and-the-math-mode/22285#22285
+\DeclareRobustCommand\ve[1]{{%
+  \ifcat\noexpand#1\relax
+    \expandafter\boldsymbol
+  \else
+    \expandafter\mathbf
+\fi{#1}}}
+
+\newcommand{\ma}[1]{\ve{#1}}
+
+\DeclareMathAlphabet\mathbfcal{OMS}{cmsy}{b}{n}
+\newcommand{\op}[1]{\mathbfcal{#1}}
+\newcommand{\hop}[1]{\hve{\mathcal{#1}}}
+% versions of the above with hats 
+\newcommand{\hve}[1]{{\widehat{\ve{#1}}}}
+\newcommand{\hma}[1]{{\hve{#1}}}
+% versions with tildes
+\newcommand{\tve}[1]{\widetilde{\ve{#1}}}
+\newcommand{\tma}[1]{\tve{#1}}
+% versions with checks
+\newcommand{\cve}[1]{{\widecheck{\ve{#1}}}}
+\newcommand{\cma}[1]{{\cve{#1}}}
+% versions with dots
+\newcommand{\dve}[1]{{\dot{\ve{#1}}}}
+\newcommand{\dma}[1]{{\dve{#1}}}
+% versions with underlines 
+\newcommand{\uve}[1]{{\underline{\ve{#1}}}}
+\newcommand{\uma}[1]{{\uve{#1}}}
+% versions with overlines 
+\newcommand{\ove}[1]{{\overline{\ve{#1}}}}
+\newcommand{\oma}[1]{{\ove{#1}}}
+% versions with underlines and tildes
+\newcommand{\tuve}[1]{{\tilde{\uve{#1}}}}
+\newcommand{\tuma}[1]{{\tuve{#1}}}
+% versions with underlines and hats
+\newcommand{\huve}[1]{{\hat{\uve{#1}}}}
+\newcommand{\huma}[1]{{\huve{#1}}}
+% versions with overlines and tildes
+\newcommand{\tove}[1]{{\tilde{\ove{#1}}}}
+\newcommand{\toma}[1]{{\tove{#1}}}
+% versions with vectors 
+% https://tex.stackexchange.com/a/192517/
+\newcommand{\harp}[1]{\mathpalette\harpoonvec{#1}}
+\newcommand{\harpvecsign}{\scriptstyle\rightharpoonup}
+\newcommand{\harpoonvec}[2]{%
+  \ifx\displaystyle#1\doalign{$\harpvecsign$}{#1#2}\fi
+  \ifx\textstyle#1\doalign{$\harpvecsign$}{#1#2}\fi
+  \ifx\scriptstyle#1\doalign{\scalebox{.6}[.9]{$\harpvecsign$}}{#1#2}\fi
+  \ifx\scriptscriptstyle#1\doalign{\scalebox{.5}[.8]{$\harpvecsign$}}{#1#2}\fi
+}
+\newcommand{\doalign}[2]{%
+ {\vbox{\offinterlineskip\ialign{\hfil##\hfil\cr#1\cr$#2$\cr}}}%
+}
+
+\newcommand{\vve}[1]{\harp{\ve{#1}}}
+\newcommand{\vma}[1]{\harp{\ma{#1}}}
+%\newcommand{\vma}[1]{\overset{\rightharpoonup}{\ma{#1}}}
+
+% Set notation
+\newcommand{\set}[1]{{\mathcal{#1}}}
+\newcommand{\hset}[1]{\widehat{\mathcal{#1}}}
+\newcommand{\tset}[1]{\widetilde{\mathcal{#1}}}
+\newcommand{\cset}[1]{\widecheck{\mathcal{#1}}}
+
+% Tensor notation
+% Bold mathcal
+% https://tex.stackexchange.com/questions/2783/bold-calligraphic-typeface
+\DeclareMathAlphabet\mathbfcal{OMS}{cmsy}{b}{n}
+\newcommand{\ten}[1]{\ve{{\mathbfcal{#1}}}}
+\newcommand{\hten}[1]{\widehat{\ve{{\mathbfcal{#1}}}}}
+\newcommand{\tenmult}[1]{{\bar{\times}_{\!\scriptstyle #1}}}
+
+% vectorize command
+\DeclareMathOperator \vectorize {vec}
+
+% Perturbation series
+\newcommand{\e}[1]{{(#1)}}
+
+% Spaces
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+
+\DeclareMathOperator*{\argmin}{argmin}
+\DeclareMathOperator*{\argmax}{argmax}
+\DeclareMathOperator*{\argsup}{argsup}
+\DeclareMathOperator*{\arginf}{arginf}
+\DeclareMathOperator*{\minimize}{minimize}
+\DeclareMathOperator*{\maximize}{maximize}
+
+
+\DeclareMathOperator \Recopy {Re}
+\renewcommand{\Re}{\Recopy }
+%\renewcommand{\Im}{{\rm Im}\, }
+\DeclareMathOperator \Imcopy {Im}
+\renewcommand{\Im}{\Imcopy }
+\newcommand{\D}{{\, \mathrm{d}}}
+\newcommand{\conj}[1]{\overline{#1}}
+
+\newcommand{\trans}{{\top}}
+\newcommand{\fro}{\mathrm{F}}
+\newcommand{\order}{  \mathcal{O} }
+
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\Range}{Range}
+\DeclareMathOperator{\Trace}{Tr}
+\DeclareMathOperator{\Rank}{Rank}
+\DeclareMathOperator{\Span}{Span}
+\DeclareMathOperator{\diam}{diam}
+% set colors
+\definecolor{colorbrewerA1}{RGB}{228,26,28} % red
+\definecolor{colorbrewerA2}{RGB}{55,126,184} % blue 
+\definecolor{colorbrewerA3}{RGB}{77,175,74} % green
+\definecolor{colorbrewerA4}{RGB}{152,78,163} % purple
+\definecolor{colorbrewerA5}{RGB}{255,127,0} % orange
+\definecolor{colorbrewerA6}{RGB}{255,255,51} % yellow
+\definecolor{colorbrewerA7}{RGB}{166,86,40} % brown
+\definecolor{colorbrewerA8}{RGB}{247,129,191} % pink
+\definecolor{colorbrewerA9}{RGB}{153,153,153} % grey
+
+\definecolor{red}{RGB}{228,26,28} % red
+\definecolor{blue}{RGB}{55,126,184} % blue 
+\definecolor{green}{RGB}{77,175,74} % green
+\definecolor{purple}{RGB}{152,78,163} % purple
+\definecolor{orange}{RGB}{255,127,0} % orange
+\definecolor{yellow}{RGB}{255,255,51} % yellow
+\definecolor{brown}{RGB}{166,86,40} % brown
+\definecolor{pink}{RGB}{247,129,191} % pink
+\definecolor{grey}{RGB}{153,153,153} % grey
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PGF settings
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\pgfplotscreateplotcyclelist{colorbrewerA}{
+	colorbrewerA1,
+	colorbrewerA2,
+	colorbrewerA3,
+	colorbrewerA4,
+	colorbrewerA5,
+	colorbrewerA6,
+	colorbrewerA7,
+	colorbrewerA8,
+	colorbrewerA9,
+}
+
+\pgfplotsset{
+	colormap={Blu9cont}{[1pt]
+		rgb255(0pt)=(247,251,255);
+		rgb255(101pt)=(222,235,247);
+		rgb255(201pt)=(198,219,239);
+		rgb255(301pt)=(158,202,225);
+		rgb255(401pt)=(107,174,214);
+		rgb255(501pt)=(66,146,198);
+		rgb255(601pt)=(33,113,181);
+		rgb255(701pt)=(8,81,156);
+		rgb255(801pt)=(8,48,107);
+	},
+	colormap={Red9}{[1pt]
+		rgb255(0pt)=(255,255,204); rgb255(100pt)=(255,255,203);
+		rgb255(101pt)=(255,237,160);rgb255(200pt)=(255,237,160);
+		rgb255(201pt)=(254,217,118);rgb255(300pt)=(254,217,118);
+		rgb255(301pt)=(254,178,76);rgb255(400pt)=(254,178,76);
+		rgb255(401pt)=(253,141,60);rgb255(500pt)=(253,141,60);
+		rgb255(501pt)=(252,78,42);rgb255(600pt)=(252,78,42);
+		rgb255(601pt)=(227,26,28);rgb255(700pt)=(227,26,28);
+		rgb255(701pt)=(189,0,38);rgb255(800pt)=(189,0,38);
+		rgb255(801pt)=(128,0,38);rgb255(900pt)=(128,0,38);
+	},
+	colormap={Blu6}{[1pt]
+		rgb255(0pt)=(239,243,255);rgb255(100pt)=(239,243,255);
+		rgb255(101pt)=(198,219,239);rgb255(200pt)=(198,219,239);
+		rgb255(201pt)=(158,202,225);rgb255(300pt)=(158,202,225);
+		rgb255(301pt)=(107,174,214);rgb255(400pt)=(107,174,214);
+		rgb255(401pt)=(49,130,189);rgb255(500pt)=(49,130,189);
+		rgb255(501pt)=(8,81,156);rgb255(600pt)=(8,81,156);
+	},
+	colormap={Blu7}{[1pt]
+		rgb255(0pt)=(239,243,255);rgb255(100pt)=(239,243,255);
+		rgb255(101pt)=(198,219,239);rgb255(200pt)=(198,219,239);
+		rgb255(201pt)=(158,202,225);rgb255(300pt)=(158,202,225);
+		rgb255(301pt)=(107,174,214);rgb255(400pt)=(107,174,214);
+		rgb255(401pt)=(66,146,198);rgb255(500pt)=(66,146,198);
+		rgb255(501pt)=(33,113,181);rgb255(600pt)=(33,113,181);
+		rgb255(601pt)=(8,69,148);rgb255(700pt)=(8,69,148);
+	},
+	colormap={Blu8}{[1pt]
+		rgb255(0pt)=(247,251,255);rgb255(100pt)=(247,251,255);
+		rgb255(101pt)=(222,235,247);rgb255(200pt)=(222,235,247);
+		rgb255(201pt)=(198,219,239);rgb255(300pt)=(198,219,239);
+		rgb255(301pt)=(158,202,225);rgb255(400pt)=(158,202,225);
+		rgb255(401pt)=(107,174,214);rgb255(500pt)=(107,174,214);
+		rgb255(501pt)=(66,146,198);rgb255(600pt)=(66,146,198);
+		rgb255(601pt)=(33,113,181);rgb255(700pt)=(33,113,181);
+		rgb255(701pt)=(8,69,148);rgb255(800pt)=(8,69,148);
+	},
+	colormap={Blu9}{[1pt]
+		rgb255(0pt)=(247,251,255);rgb255(100pt)=(247,251,255);
+		rgb255(101pt)=(222,235,247);rgb255(200pt)=(222,235,247);
+		rgb255(201pt)=(198,219,239);rgb255(300pt)=(198,219,239);
+		rgb255(301pt)=(158,202,225);rgb255(400pt)=(158,202,225);
+		rgb255(401pt)=(107,174,214);rgb255(500pt)=(107,174,214);
+		rgb255(501pt)=(66,146,198);rgb255(600pt)=(66,146,198);
+		rgb255(601pt)=(33,113,181);rgb255(700pt)=(33,113,181);
+		rgb255(701pt)=(8,81,156);rgb255(800pt)=(8,81,156);
+		rgb255(801pt)=(8,48,107);rgb255(900pt)=(8,48,107);
+	},
+}
+
+\pgfdeclareplotmark{rotsquare}{%
+\pgfpathmoveto{\pgfqpoint{0pt}{\pgfplotmarksize}}%
+\pgfpathlineto{\pgfqpoint{\pgfplotmarksize}{0pt}}%
+\pgfpathlineto{\pgfqpoint{0pt}{-\pgfplotmarksize}}%
+\pgfpathlineto{\pgfqpoint{-\pgfplotmarksize}{0pt}}%
+\pgfpathclose%
+}
+
+
+
+\pgfplotsset{every axis/.append style={
+		legend style={font=\footnotesize,fill=none,draw=none,cells={anchor=west}},
+		tick label style ={font=\scriptsize},
+		label style = {font=\footnotesize},
+		title style = {font=\footnotesize},
+		major tick length=0.1cm,
+		minor tick length=0.066cm,
+		ticklabel shift=0pt,
+		cycle list name=colorbrewerA,
+		legend cell align=left,
+		font=\footnotesize,
+		axis on top=true,
+		line join=bevel,
+		enlargelimits=false},
+		% http://tex.stackexchange.com/questions/42697/pgfplots-legends-in-multiple-y-axis-plot-overlapping
+		y axis style/.style={
+			yticklabel style=#1,
+			ylabel style=#1,
+			y axis line style=#1,
+			ytick style=#1
+	   }
+}
+
+\newcommand\subsetsim{\mathrel{\substack{
+  \textstyle\subset\\[-0.2ex]\textstyle\sim}}}
+
+\newcommand\supsetsim{\mathrel{\substack{
+  \textstyle\supset\\[-0.2ex]\textstyle\sim}}}
