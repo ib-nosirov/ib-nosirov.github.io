@@ -12,7 +12,7 @@ font-style:italic;
 *
 {
 font-family: 'Inter', 'Helvetica Neue'; 
-color: #000000;
+color: #555;
 text-align: center;
 margin: auto;
 width: 640px;
@@ -37,6 +37,19 @@ h3
 font-size: 14pt;
 }
 
+p
+{
+text-align: justify;
+font-size: 10.5pt;
+line-height: 175%;
+}
+
+li
+{
+text-align: justify;
+font-size: 10.5pt;
+line-height: 175%;
+}
 a
 {
 padding: 0px;
