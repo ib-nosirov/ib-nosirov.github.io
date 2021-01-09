@@ -2,7 +2,7 @@
 <html>
 <head>
         <title>Ibrohim Nosirov Blog</title>
-        <link rel="stylesheet" type="text/css" href="css/article.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/article.css"/>
 </head>
 <body>
         <h3><a href="index.html">HOME</a></h3>
@@ -24,7 +24,7 @@ produces a rather large collection of features. We will extensively discuss a
 small subset of these knobs and dials as they pertain to one type of
 visualization: the block diagram.
 </p>
-<img src="tex/my_fig.svg" />
+<img src="../tex/my_fig.svg" />
 <p>
 A block diagram consists mostly of stylized <code>\node</code> tags organized
 on slightly more abstract grid system. TikZ uses a 1cm-unit coordinate system
@@ -33,7 +33,7 @@ by a <code>\node</code> tag, which by itself does not render anything, but can
 be styled into almost any shape. <code>\node</code>'s allow for many
 modifications, as seen in the below example.
 </p>
-<img src="tex/grid.svg" alt="TikZ grid" width="650">
+<img src="../tex/grid.svg" alt="TikZ grid" width="450">
 <figcaption>A grid similar to the one used by the TikZ backend. Nodes on the
         grid may be aliased, and those aliases used to link coordinates as well
         as other aliases together with arrows. Nodes can also be anchored with
@@ -103,7 +103,7 @@ preamble of a TikZ 'picture':
 </pre>
                         <p>
 Armed with the ability to predefine node styles and loops, we can now create
-a final create a detailed outline of this diagram:
+a more detailed outline of this diagram:
 <ol>
         <li>Predefine what squares and cells (as referred to in LSTM models)
                 will look like.</li>
