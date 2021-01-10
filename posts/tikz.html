@@ -1,13 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-        <title>Ibrohim Nosirov Blog</title>
-        <link rel="stylesheet" type="text/css" href="../css/article.css"/>
+<title>Ibrohim Nosirov Blog</title>
+<link rel = "stylesheet" type="text/css" href = "../css/article.css"/>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config(
+  {
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+  "HTML-CSS": {
+    availableFonts: [], webFont: "Neo-Euler"
+  }
+  });
+</script>
+<script type="text/javascript" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-MML-AM_HTMLorMML"> </script>
 </head>
 <body>
-        <h3><a href="../index.html">HOME</a></h3>
+        <h3><a class=nav href="../index.html">BLOG</a> |
+        <a class=nav href="../index.html">VIDEOS</a> |
+        <a class=nav href="../index.html">ABOUT</a></h3>
+        <div class=title>
+        <h3 class=cs>COMPUTER SCIENCE</h3>
+        <h3 class=date>November 26, 2020</h3>
         <h2> Structure of a Block Diagram Using TikZ</h2>
-                <h3>26 November 2020</h3>
+        </div>
 <p>
 What we are building to:
 <ul>
@@ -44,8 +60,8 @@ modifications, as seen in the below example.
         \draw[step=1cm,gray,very thin] (-5,5) grid (5,5);
         \filldraw [gray] (0,0) circle (2pt);
         \node[label={south:node at (0,0)}] (origin) at (0,0) {};
-        \node[label={east:2cm arrow from (0,0) to (0,2)}] 
-                (f_step) at (0.5,1) {};
+        \node[label={east:2cm arrow from (0,0) to (0,2)}] (f_step) at (0.5,1) {
+        };
         \draw[->] (origin) -> (0,2);
 \end{tikzpicture}
         </code>

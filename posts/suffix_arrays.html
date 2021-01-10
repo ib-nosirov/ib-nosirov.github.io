@@ -8,7 +8,7 @@
   {
   tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
   "HTML-CSS": {
-    availableFonts: [], webFont: "Gyre-Pagella"
+    availableFonts: [], webFont: "Neo-Euler"
   }
   });
 </script>
@@ -16,12 +16,17 @@
         src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-MML-AM_HTMLorMML"> </script>
 </head>
 <body>
-        <h3><a href="../index.html">HOME</a></h3>
-        <h2>Suffix Array</h2>
-        <h3>8 January 2021</h3>
+        <h3><a class=nav href="../index.html">BLOG</a> |
+        <a class=nav href="../index.html">VIDEOS</a> |
+        <a class=nav href="../index.html">ABOUT</a></h3>
+        <div class=title>
+        <h3 class=cs>COMPUTER SCIENCE</h3>
+        <h3 class=date>January 8, 2021</h3>
+        <h2>Data Structure: Suffix Array</h2>
+        </div>
 <p>
 Let $s$ be a string of length $n$. The $i$-th suffix of $s$ is the substring
-$s[i...n-1]$. The <i>suffix array</i> will contain integers that represent the
+$s[i...n-1]$. The <b>suffix array</b> will contain integers that represent the
 starting indeces of all the suffixes of a given string, after the suffixes are
 sorted. For example, consider the string $s = abaab$. All suffixes are as
 follows
