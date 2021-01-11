@@ -95,7 +95,7 @@ background-color:#dcdcdc;
 h2
 {
 font-family: 'Inter-Regular', 'Helvetica Neue', 'Arial';
-text-align: center;
+text-align: left;
 font-size: 12pt;
 width: 100%;
 margin: auto;
@@ -104,7 +104,18 @@ margin: auto;
 h3
 {
 font-family: 'Inter-Light', 'Helvetica Neue', 'Arial';
-text-align: center;
+text-align: left;
+font-size: 10pt;
+width: 100%;
+margin: auto;
+padding: 5px;
+color: #aaa;
+}
+
+h3.nav
+{
+font-family: 'Inter-Light', 'Helvetica Neue', 'Arial';
+text-align: center;;
 font-size: 10pt;
 width: 100%;
 margin: auto;

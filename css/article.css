@@ -22,7 +22,6 @@ font-family: 'Inter-Medium';
 src: url('../fonts/Inter-Medium.woff');
 }
 
-
 p
 {
 font-family: 'Inter-Light', 'Helvetica';
@@ -46,9 +45,9 @@ margin: auto;
 h3
 {
 font-family: 'Inter-Light', 'Helvetica Neue', 'Arial';
-text-align: center;
+text-align: left;
 font-size: 17pt;
-width: 800px;
+width: 650px;
 margin: auto;
 padding: 5px;
 }
@@ -72,11 +71,26 @@ margin: auto;
 img
 {
 display: block;
-width: 650px;
+width: 630px;
 position: center;
 border: 20px;
 margin: auto;
 padding: 10px;
+background-color: #fafafa;
+border-radius: 10px;
+}
+
+video
+{
+display: block;
+width: 650px;
+height: 365px;
+position: center;
+border: 20px;
+margin: auto;
+padding: 10px;
+border-radius: 10px;
+background-color: #000;
 }
 
 figcaption
@@ -89,12 +103,12 @@ margin: auto;
 
 pre code 
 {
-  background-color: #eee;
-  border: 1px solid #eee;
+  background-color: #fafafa;
   position: center;
   width: 650px;
   margin: auto;
   display: block;
+  border-radius: 10px;
 }
 
 code
@@ -156,6 +170,38 @@ width: 650px;
 margin: auto;
 padding-bottom: 0px;
 color: #fc0377;
+}
+
+h3.math
+{
+font-family: 'Inter-Light', 'Helvetica Neue', 'Arial';
+text-align: left;
+font-size: 9pt;
+width: 650px;
+margin: auto;
+padding-bottom: 0px;
+color: #ba0707;
+}
+
+h3.meta
+{
+font-family: 'Inter-Light', 'Helvetica Neue', 'Arial';
+text-align: left;
+font-size: 9pt;
+width: 650px;
+margin: auto;
+padding-bottom: 0px;
+color: #80ffd2;
+}
+
+h3.nav
+{
+font-family: 'Inter-Light', 'Helvetica Neue', 'Arial';
+text-align: center;
+font-size: 17pt;
+width: 650px;
+margin: auto;
+padding: 5px;
 }
 
 i.title

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ibrohim Nosirov Blog</title>
+<link rel = "stylesheet" type="text/css" href = "css/article.css"/>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config(
+  {
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+  "HTML-CSS": {
+    availableFonts: [], webFont: "Neo-Euler"
+  }
+  });
+</script>
+<script type="text/javascript" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-MML-AM_HTMLorMML"> </script>
+</head>
+<body>
+        <h3><a class=nav href="../index.html">BLOG</a> |
+        <a class=nav href="../index.html">VIDEOS</a> |
+        <a class=nav href="../index.html">ABOUT</a></h3>
+        <div class=title>
+        <h3 class=cs>COMPUTER SCIENCE</h3>
+        <h3 class=date>November 26, 2020</h3>
+        <h2> Structure of a Block Diagram Using TikZ</h2>
+        </div>
+<p>
+What we are building to:
+<ul>
+        <li>How to organize a TikZ picture for block diagrams.</li>
+        <li>How to use TikZ preamble styles for improved modularity.</li>
+        <li>Pseudocode outline of an example diagram.</li>
+</ul>
+</p>
+<p>
+TikZ is a front-end package that relies on the PGF math engine to render TeX
+diagrams. Researchers often use TikZ in publications because it precisely
+organizes diagram elements without explicit instruction. This abstraction
+produces a rather large collection of features. We will extensively discuss a
+small subset of these knobs and dials as they pertain to one type of
+visualization: the block diagram.
+</p>
+<img src="tex/my_fig.svg" />
+<p>
+A block diagram consists mostly of stylized <code>\node</code> tags organized
+on slightly more abstract grid system. TikZ uses a 1cm-unit coordinate system
+to place and navigate between items. Often times, such an item is referred to
+by a <code>\node</code> tag, which by itself does not render anything, but can
+be styled into almost any shape. <code>\node</code>'s allow for many
+modifications, as seen in the below example.
+</p>
+<img src="tex/grid.svg" alt="TikZ grid" width="450">
+<figcaption>A grid similar to the one used by the TikZ backend. Nodes on the
+        grid may be aliased, and those aliases used to link coordinates as well
+        as other aliases together with arrows. Nodes can also be anchored with
+        text.</figcaption>
+<pre>
+        <code>
+\begin{tikzpicture}
+        \draw[step=1cm,gray,very thin] (-5,5) grid (5,5);
+        \filldraw [gray] (0,0) circle (2pt);
+        \node[label={south:node at (0,0)}] (origin) at (0,0) {};
+        \node[label={east:2cm arrow from (0,0) to (0,2)}] (f_step) at (0.5,1) {
+        };
+        \draw[->] (origin) -> (0,2);
+\end{tikzpicture}
+        </code>
+</pre>
+<p>
+We first render a 5x5 grid with 1cm steps. Every element, whether it is
+ <code>\draw</code> or <code>\node</code>, is plotted on TikZ's grid, we get
+ a grid at (0,0) and since we choose 1cm ticks, the grid overlaps entirely with
+ the grid TikZ is using in its calculations (Note, this generated grid is not
+ the grid TikZ is using; it's only rendered this way to illustrate a point). On
+ the second line, we specify the location of a point using the (0,0) coordinate
+ system. We then specify a <code>\node</code> element, which by itself does
+ not display anything, rather it serves as a pointer that we can style with
+ different elements (i.e. green rectangles or blue squares). Here we anchor a
+ piece of text at the bottom of the node using the <code> label</code> tag.
+ Notice how we never had to specify the relative placement of the text. We can
+ also alias nodes with meaningful names, such as <code>origin</code>, which
+ makes it easier to refer to them when need their position. Nodes can also be
+ used to strategically add text to a diagram without interrupting the visuals.
+                        </p>
+                        <p>
+Using nodes and the grid, we can begin to outline how to build the diagram:
+<ol>
+        <li>Define a node for each element in the diagram.</li>
+        <li>Anchor the necessary nodes with text.</li>
+        <li>Style each node.</li>
+</ol>
+                        </p>
+                        <p>
+This process is likely to be very tedious and could probably be streamlined
+using <code>for</code> loops, which TikZ provides, and a way to predefine the
+style of frequently used elements. We define styles for nodes in the so-called
+preamble of a TikZ 'picture':
+                        </p>
+<pre>
+        <code>
+\begin{tikzpicture} [
+        squares/.style 2 args={
+        rectangle split,
+        rectangle split horizontal,
+        draw=#2,
+        rectangle split parts=#1,
+        fill=#2!20,
+        outer sep=1mm},
+
+        cell/.style{
+        align=center,
+        rectangle,
+        rounded corners=5mm,
+        draw=green,
+        fill=green!20,
+        inner sep=5mm,
+        outer sep=1mm}]
+        </code>
+</pre>
+                        <p>
+Armed with the ability to predefine node styles and loops, we can now create
+a more detailed outline of this diagram:
+<ol>
+        <li>Predefine what squares and cells (as referred to in LSTM models)
+                will look like.</li>
+        <li>Create a 'for' loop to copy the first three columns, moving
+                everything a fixed amount each iteration (arrows
+                included).</li>
+        <li>Repeat the code for the somewhat unique 4th and 5th columns
+                (arrows included).</li>
+        <li>Create the top portion of the diagram (arrows included).</li>
+</ol>
+</body>
+</html>

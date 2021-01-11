@@ -1,0 +1,21 @@
+\documentclass{standalone}
+\usepackage[scaled]{helvet}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+\usetikzlibrary{arrows,snakes,backgrounds}
+
+\begin{document}
+\tikzstyle{pillar}=[circle,draw=blue!50,fill=blue!20,thick,
+        inner sep=0pt,minimum size=2cm]
+\tikzstyle{pre}=[<-,shorten <=1pt,>=stealth',semithick]
+\tikzstyle{post}=[->,shorten >=1pt,>=stealth',semithick]
+\begin{tikzpicture}
+        \node at (0,5.2) (abs) [pillar] {Abstraction}
+                edge [post,bend left=45] (3.1,1);
+        \node at (3,0) (auto) [pillar] {Automation}
+                edge [post,bend left=45] (-2.9,-1);
+        \node at (-3,0) (ana) [pillar] {Analysis}
+                edge [post,bend left=45] (-1,5.2);
+\end{tikzpicture}
+\end{document}
