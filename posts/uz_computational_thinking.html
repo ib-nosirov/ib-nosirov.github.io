@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Ibrohim Nosirov Blog</title>
+<title>Hisoblash Taffakuri - Ibrohim</title>
+<meta name="description" content="hisoblash tafakkuri bu ajralish, ajralish,
+avtomatlashtirish va analdan iborat bo'lgan qobiliyatdir.">
 <link rel = "stylesheet" type="text/css" href = "../css/article.css"/>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config(
@@ -20,11 +22,112 @@
         <a class=nav href="../index.html">VIDEOS</a> |
         <a class=nav href="../index.html">ABOUT</a></h3>
         <div class=title>
-        <h3 class=cs>COMPUTER SCIENCE</h3>
-        <h3 class=date>Date</h3>
-        <h1>Title</h1>
+        <h3 class=cs>INFORMATIKA</h3>
+        <h3 class=date>15 May, 2020</h3>
+        <h1>Hisoblash tafakkuri</h1>
         </div>
         <p>
-        Lorem ipsum ...
+        Ushbu xabar faqat kompyuter olimi kabi fikrlashga kirishishdir. Bu
+        faqat umumiy g'oya bilan tanishish uchun mo'ljallangan. Hisoblash
+        tafakkuri - bu qobiliyat va asta-sekin takomillashtirish uchun doimiy
+        ravishda mashq qilinishi kerak bo'lgan narsadir. Men faqat sizning
+        ushbu fikrlash tarzingiz uchun minnatdorchilik bilan yurishingizni umid
+        qilaman.
+        </p>
+        <h3>Parchalanish: muammoni buzish</h3>
+        <p>
+        Aslida hisoblash tafakkuri - bu sizning fikrlaringizni tartibga
+        solishning bir usuli, shuning uchun siz muammoga qarab kamroq vaqt
+        sarflaysiz. "Bu savol aslida nimani so'raydi?" Deb boshlanadi. Masalan,
+        agar sizdan $3x^2 + 5x + 2$ polinomning ildizlarini topishni so'rashgan
+        bo'lsa,bu savolga qanday javob berasiz? Agar siz ilgari muammoni
+        ko'rgan bo'lsangiz, siz polinomni omil qilib, uni nolga tenglashtirasiz
+        va $x$ ning qiymatlarini topishingiz mumkin  bu tenglikni qondiradigan.
+        Agar boshqa tomondan, muammoni birinchi marta ko'rayotgan bo'lsangiz,
+        unda siz ba'zi atamalarni belgilashingiz kerak. Sizning birinchi
+        muammoingiz hisob-kitoblarni amalga oshirishda emas, balki savolning
+        har xil qismlari nimani anglatishini aniqlashda. Bunday holda, siz
+        polinom nima ekanligini bilasiz deb faraz qilsangiz, Google-dan tez
+        "polinomning ildizi" ni izlashda ta'rif paydo bo'ladi: <i>ko'pburchakning
+        ildizlari bu o'zgaruvchining qiymatlari bo'lib, bu polinomning nolga
+        tenglashishiga olib keladi</i>. So'ngra so'rash uchun asl savolni takrorlashimiz mumkin,
+        </p>
+        <p>
+        $x$ ning qiymatlarini toping bu $3x^2 + 5x + 2$ polinomni keltirib
+        chiqaradi nolga baholash.
+        </p>
+        <h3>Abstraktsiya: avval so'z bilan aytish</h3>
+        <p>
+Endi biz muammoni tenglik sifatida qayta yozishimiz mumkin,
+        </p>
+        <p>
+$3x^2 + 5x + 2 = 0$ ba'zi raqamlar $x$ uchun.
+        </p>
+        <p>
+        Ushbu $x$ raqamini topish juda oson emas. $3x^2$ mavjud o'sib boradigan
+        muddat, shuning uchun biz $0$ ga yaqinlashmoqchi bo'lsak, bizga $x$ ga
+        teng keladigan manfiy son kerak, bu raqam juda salbiy bo'lmasligi va
+        nolga yaqin bo'lishi mumkin emas... bu ma'lumotli taxmin juda ko'p
+        vaqt talab qilishi mumkin. Bizga har safar to'g'ri qadriyatlarni
+        beradigan ba'zi bir qadamlarni ishlab chiqishimiz kerak. Ko'proq
+        tenglamalarni yozishga o'tishdan oldin hisoblash tafakkuri nima
+        qilishni xohlayotganimizni oddiy so'zlar bilan aytishni taklif qiladi.
+        Bunga <i>abstraktlik</i> deyiladi va bu tafsilotlarni e'tiborsiz
+        qoldirish va qoidalarni buzish mumkin bo'lgan ijodiy bit. Maqsad -
+        ba'zi g'oyalarni miyasiga hujum qilish. Misol misolida biz 0 ga
+        erishish uchun raqamlarni qo'shish yoki ko'paytirishning barcha
+        usullarini topishimiz kerak . Nolga erishish uchun manfiy va musbat
+        sonlarni qo'shishimiz mumkin, nolga teng bo'lgan har qanday narsa nolga
+        teng. Biz ushbu ikkinchi burchakni bir muncha vaqt ishlashimiz va
+        polinomni x ni o'z ichiga olgan ikkita sonni ko'paytirishga qayta
+        tuzish usuli - faktoringni topishimiz mumkin.  va keyin x ni toping bu
+        har bir individual raqamni nolga aylantiradi. Men bu fikrni jozibali
+        qilyapman, chunki post hisoblash tafakkuri haqida. Faktoringga
+        chuqurroq sho'ng'ish uchun videoni tekshiring, <a href =
+        '../videos/factoring_part_1/factoring_part_1.html'>algebraik iboralar
+faktoring: kirish</a>.
+        </p>
+        <h3>Avtomatlashtirish: amaldagi qadamlarni yozish</h3>
+        <p>
+        Bu erda biz so'zlarimizni ketma-ket bosqichlarga o'tkazamiz.
+        Avtomatlashtirishning o'zi subproblemlarga bo'linishi va bir xil
+        hisoblash tafakkuri yordamida echilishi mumkin. Faktoring holatida
+        shunday ko'rinadi
+        $$3x^2 + 5x + 2 = 0$$
+        $$(ax + b)(cx + d) = 0$$
+        $$(3x + b)(1x + d) = 0$$
+        $$3x(d) + x(b) = 5x, bd = 2$$
+        $$d = 1, b = 2$$
+        $$(3x + 2)(x + 1) = 0$$
+        $$x = -\dfrac{3}{2}, -1$$
+        </p>
+        <h3>Tahlil: uni yaxshiroq qilish</h3>
+        <p>
+        Muammoni hal qilish usulini o'ylab topgandan so'ng, usulda xatolarni
+        topish haqida o'ylashimiz kerak. Biz harakatlarning aksariyati qaerga
+        ketayotganini ko'rib chiqishimiz kerak, agar ba'zi bir qadamlarni
+        soddalashtirsak yoki ba'zi qadamlarni qisqartirish mumkin bo'lsa. Eng
+        muhimi, bizning yechimimiz qachon va qanday amalga oshmasligi haqida
+        o'ylashimiz kerak. Masalan, biz aniq taqsimlaydigan yoki
+        ko'paytiradigan raqamlarni topa olmasak, bizning faktoring
+        yondashuvimiz nima bo'ladi? Haqiqiy raqamli echimlar bo'lmasa nima
+        bo'ladi?  Faktoring, biz aniqlaganimizdek, bizni bu narsalar
+        to'g'risida ogohlantirish usuliga egami? Agar yo'q bo'lsa, lekin qachon
+        "yo'q" deb javob berish kerak, birinchi qadamga qaytib, polishingni
+        davom ettirish vaqti keldi.
+        </p>
+        <img src='../tex/comp_think_cycle.svg'></img>
+        <h3>Xulosa: amaliyot mukammal qiladi</h3>
+        <p>
+        Demak shunday bo'ldi! Turli xil odamlar hisoblash tafakkurini turlicha
+        ta'riflaydi va bu shunday usullardan biridir. Yuqorida aytib
+        o'tganimdek, men kompyutershunos olimning boshida nima bo'lishi
+        mumkinligi haqida taxminiy tasavvurni taqdim etdim, chunki ular
+        muammoni hal qilishmoqda. Hisoblash tafakkuri yangi ma'lumotlarni hazm
+        qilishga va boshqalarning muammolarni hal qilish yo'llari haqida
+        tanqidiy fikrlashga yordam beradi. Ko'plab mutaxassislar ishlayotganda
+        abstraktsiya-avtomatizatsiya-tahlil haqida faol o'ylashlariga shubha
+        qilaman; vaqt o'tishi bilan bu dunyoni ko'rishning odatiy usuliga
+        aylanadi.
         </p>
 </body>
