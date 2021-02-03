@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Computational Thinking - Ibrohim</title>
+<title>Computational Thinking - Ibrohim Nosirov</title>
 <meta name="description" content="Computational thinking is a skill that
 constists of decomposition, abstraction, automation, and analysis.">
 <link rel = "stylesheet" type="text/css" href = "../css/article.css"/>
@@ -10,7 +10,7 @@ constists of decomposition, abstraction, automation, and analysis.">
   {
   tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
   "HTML-CSS": {
-    availableFonts: [], webFont: "Neo-Euler"
+    availableFonts: [], webFont: "STIX"
   }
   });
 </script>
@@ -87,13 +87,13 @@ factoring.
 This is where we put our words into sequential steps. Automation itself can
 be broken down into subproblems and solved using the same computational
 thinking. In the factoring case, it looks like this
-$$3x^2 + 5x + 2 = 0$$
-$$(ax + b)(cx + d) = 0$$
-$$(3x + b)(1x + d) = 0$$
-$$3x(d) + x(b) = 5x, bd = 2$$
-$$d = 1, b = 2$$
-$$(3x + 2)(x + 1) = 0$$
-$$x = -\dfrac{3}{2}, -1$$
+$$\begin{align}
+3x^2 + 5x + 2 & = 0 \\
+(ax + b)(cx + d) & = 0 \\
+(3x + b)(1x + d) & = 0 \\
+(3x + 2)(x + 1) & = 0 \\
+x & = -\frac{3}{2}, -1
+\end{align}$$
         </p>
         <h3>Analysis: making it better</h3>
         <p>
@@ -108,7 +108,6 @@ $$x = -\dfrac{3}{2}, -1$$
         but when, the answer is 'no', it's time to go back to the very first
         step and resume polishing.
         </p>
-        <img src='../tex/comp_think_cycle.svg'></img>
         <h3>Conclusion: practice makes perfect</h3>
         <p>
 So that's it! Different people define computational thinking differently and

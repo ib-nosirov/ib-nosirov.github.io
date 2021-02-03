@@ -25,8 +25,8 @@ src: url('../fonts/Inter-Medium.woff');
 p
 {
 font-family: 'Inter-Light', 'Helvetica';
-font-size: 13pt;
-line-height: 160%;
+font-size: 12pt;
+line-height: 150%;
 width: 650px;
 margin: auto;
 text-align: left;
