@@ -2,38 +2,30 @@
 \usepackage{amsmath, amsthm}
 \usepackage{mathpazo}
 \begin{document}
-\it{What if I went back to sleep for a while and forgot all this foolishness,”
-he thought. However, this was totally impracticable, as he habitually slept on
-his right side, a position he could not get into in his present state; no matter
-how forcefully he heaved himself to the right, he rocked onto his back again.
+\begin{verbatim}
 
-And so he began to work with consuming energy and was promoted, almost
-overnight, from a minor clerk to a traveling salesman with much greater
-potential to earn money, and his success was soon transformed, by way of
-commission, into cash that he could then lay on the table before the astonished
-and delighted family.
+rec:
+        # Prologue
+        addi $sp, $sp, -8 # allocate space for $ra, $a0, $s0
+        sw $ra, 4($sp) # save $ra at the top of stack
+        
+        # Body
+        bne $a0, $0, calc_rec # if n == 0 goto base
+        and $v0, $0, $0 # $v0 = 0, return value
+        addi $t0, $0, 1 # get ready to turn on the first index of a
+        la $t1, a
+        sw $t0, 0($t1) # turn on said index - a[0] = 1;
+        j rec_done
 
-Gregor spent the days and nights almost entirely without sleep. Sometimes he
-mulled over the idea that the next time the door opened he would take control of
-the family affairs as he had done in the past
+        # calculate rec(n - 1, a)
+calc_rec:
+	sw $a0, 0($sp) # need $a0 after jal
+        addi $a0, $a0, -1 # $a0 = n - 1
+        jal rec
+        # Epilogue
+        lw $ra, 4($sp) # load $ra
+        lw $a0, 0($sp) # restore $a
+        addi $sp, $sp, 8 # reduce the size of the stack
 
-What if I went back to sleep for a while and forgot all this foolishness,”
-he thought. However, this was totally impracticable, as he habitually slept on
-his right side, a position he could not get into in his present state; no matter
-how forcefully he heaved himself to the right, he rocked onto his back again.
-
-And so he began to work with consuming energy and was promoted, almost
-overnight, from a minor clerk to a traveling salesman with much greater
-potential to earn money, and his success was soon transformed, by way of
-commission, into cash that he could then lay on the table before the astonished
-and delighted family.
-
-Gregor spent the days and nights almost entirely without sleep. Sometimes he
-mulled over the idea that the next time the door opened he would take control of
-the family affairs as he had done in the past
-
-What if I went back to sleep for a while and forgot all this foolishness,”
-he thought. However, this was totally impracticable, as he habitually slept on
-his right side, a position he could not get into in his present state; no matter
-how forcefully he heaved himself to the right, he rocked onto his back again.}
+\end{verbatim}
 \end{document}
