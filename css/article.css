@@ -25,19 +25,18 @@ src: url('../fonts/Inter-Medium.woff');
 p
 {
 font-family: 'Inter-Light', 'Helvetica';
-font-size: 10.5pt;
-line-height: 150%;
+font-size: 9.5pt;
+line-height: 200%;
 width: 650px;
 margin: auto;
-text-align: left;
-padding: 10px;
+padding-bottom: 10px;
 }
 
 h1
 {
 font-family: 'Inter-Regular', 'Helvetica Neue', 'Arial';
 text-align: left;
-font-size: 34pt;
+font-size: 24pt;
 width: 650px;
 margin: auto;
 }
@@ -46,10 +45,10 @@ h3
 {
 font-family: 'Inter-Light', 'Helvetica Neue', 'Arial';
 text-align: left;
-font-size: 17pt;
+font-size: 14pt;
 width: 650px;
 margin: auto;
-padding: 5px;
+padding: 10px;
 }
 
 i
@@ -136,7 +135,7 @@ text-align: left;
 .title
 {
 padding-top: 70px;
-padding-bottom: 70px;
+padding-bottom: 10px;
 }
 
 h3.date
