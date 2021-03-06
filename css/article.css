@@ -121,10 +121,20 @@ width: 700px;
 margin: auto;
 }
 
+.box
+{
+background-color: #fafafa;
+position: center;
+width: 650px;
+margin: auto;
+display: block;
+border-radius: 10px;
+}
+
 li
 {
 font-family: 'Inter-Light', 'Helvetica';
-font-size: 13pt;
+font-size: 9pt;
 line-height: 175%;
 width: 650px;
 margin: auto;
@@ -213,7 +223,7 @@ padding: 0px;
 
 a.nav
 {
-font-size: 11.5pt;
+font-size: 9.5pt;
 padding: 0px;
 width: auto;
 margin: auto;
