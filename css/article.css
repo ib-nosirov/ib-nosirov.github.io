@@ -26,18 +26,19 @@ p
 {
 font-family: 'Inter-Light', 'Helvetica';
 font-size: 9.5pt;
-line-height: 200%;
-width: 650px;
+line-height: 150%;
+width: 500px;
 margin: auto;
-padding-bottom: 10px;
+padding-top: 5px;
+padding-bottom: 5px;
 }
 
 h1
 {
 font-family: 'Inter-Regular', 'Helvetica Neue', 'Arial';
 text-align: left;
-font-size: 24pt;
-width: 650px;
+font-size: 20pt;
+width: 500px;
 margin: auto;
 }
 
@@ -46,7 +47,7 @@ h3
 font-family: 'Inter-Light', 'Helvetica Neue', 'Arial';
 text-align: left;
 font-size: 14pt;
-width: 650px;
+width: 500px;
 margin: auto;
 padding: 10px;
 }
@@ -63,7 +64,7 @@ b
 {
 font-family: 'Inter-Medium';
 padding: 0px;
-width: 650px;
+width: 500px;
 margin: auto;
 }
 
@@ -82,7 +83,7 @@ border-radius: 10px;
 video
 {
 display: block;
-width: 650px;
+width: 500px;
 height: 365px;
 position: center;
 border: 20px;
@@ -96,7 +97,7 @@ figcaption
 {
 font-family: 'Inter-Regular';;
 font-size: 10.5pt;
-width: 650px;
+width: 500px;
 margin: auto;
 }
 
@@ -104,7 +105,7 @@ pre code
 {
   background-color: #fafafa;
   position: center;
-  width: 650px;
+  width: 500px;
   margin: auto;
   display: block;
   border-radius: 10px;
@@ -123,12 +124,13 @@ margin: auto;
 
 .box
 {
-background-color: #fafafa;
+background-color: #f1f1f1;
 position: center;
-width: 650px;
+width: 500px;
 margin: auto;
 display: block;
 border-radius: 10px;
+padding: 5px;
 }
 
 li
@@ -136,7 +138,7 @@ li
 font-family: 'Inter-Light', 'Helvetica';
 font-size: 9pt;
 line-height: 175%;
-width: 650px;
+width: 500px;
 margin: auto;
 text-align: left;
 }
@@ -153,7 +155,7 @@ h3.date
 font-family: 'Inter-Light', 'Helvetica Neue', 'Arial';
 text-align: left;
 font-size: 9pt;
-width: 650px;
+width: 500px;
 margin: auto;
 padding-bottom: 20px;
 color: #aaa;
@@ -164,7 +166,7 @@ h3.literature
 font-family: 'Inter-Light', 'Helvetica Neue', 'Arial';
 text-align: left;
 font-size: 9pt;
-width: 650px;
+width: 500px;
 margin: auto;
 padding-bottom: 0px;
 color: #00ddff;
@@ -175,7 +177,7 @@ h3.cs
 font-family: 'Inter-Light', 'Helvetica Neue', 'Arial';
 text-align: left;
 font-size: 9pt;
-width: 650px;
+width: 500px;
 margin: auto;
 padding-bottom: 0px;
 color: #fc0377;
@@ -186,7 +188,7 @@ h3.math
 font-family: 'Inter-Light', 'Helvetica Neue', 'Arial';
 text-align: left;
 font-size: 9pt;
-width: 650px;
+width: 500px;
 margin: auto;
 padding-bottom: 0px;
 color: #ba0707;
@@ -197,7 +199,7 @@ h3.meta
 font-family: 'Inter-Light', 'Helvetica Neue', 'Arial';
 text-align: left;
 font-size: 9pt;
-width: 650px;
+width: 500px;
 margin: auto;
 padding-bottom: 0px;
 color: #80ffd2;
@@ -208,7 +210,7 @@ h3.nav
 font-family: 'Inter-Light', 'Helvetica Neue', 'Arial';
 text-align: center;
 font-size: 17pt;
-width: 650px;
+width: 500px;
 margin: auto;
 padding: 5px;
 }

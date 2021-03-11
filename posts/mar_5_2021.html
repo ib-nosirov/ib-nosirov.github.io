@@ -7,7 +7,7 @@
   {
   tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
   "HTML-CSS": {
-    availableFonts: [], webFont: "STIX"
+    availableFonts: [], webFont: "Latin-Modern"
   }
   });
 </script>
@@ -21,52 +21,22 @@ src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-MML-AM_HTMLorM
         <div class=title>
         <h3 class=math>MATH</h3>
         <h3 class=date>March 05, 2021</h3>
-        <h1>Friday reflection: quantifying habits, concise proofs are hard,
-        and psets</h1>
+        <h1>Proof Dissection</h1>
         </div>
-<p>
-The writing debrief I tried to do last week fell through. I think it's because
-the weekend, instead of the weekdays, should be the time for all homework
-assignnments; it's hard to reflect on the day when you have a deadline in two
-hours and tomorrow's work is cut out for you. I find myself in a reactionary
-mode and that's exhausting, which leads to more time wasted trying to relieve
-the fatigue with too much low-quality entertainment at the wrong time of day. No
-more. Starting this week, I'm going to complete all my homework on the weekend
-so there is a) more time to react to activities during the week and b) it's much
-easier to write without anxiety in the face of impending doom that is a
-deadline. With tons of work and the subsequent escapist cycle of binging nothing
-in particular, I've realized, tracking habits is much more stressful than it
-really should be. This habit tracker idea is great because it helps quantify
-just how little our accomplishments are in the grand scheme of a month or year.
-I happen to thrive on <a class=nav
-href="https://www.youtube.com/watch?v=Q0CwNpMmUfY" target="_blank">negative
-reinforcement</a>, so I rather enjoy seeing a feeble streak of 5 runs because
-it's a sort of launching pad for a more "perfect week". Addressing habit
-tracking more generally, I think it's only useful as raw data that should inform
-how tasks are managed, but it might be unhealthy to attach emotional value to
-habit tracking simply because numbers have the effect of describing the past and
-spitting out bleak self-fulfilling prophecies. In short, will power is not a
-matter of looking at how much sugar you already consumed; rather, will is an
-exercise of emotional obsession, like desperately holding on to something.  Next
-week, I intend to keep track of exercise, 'perfect meals', and the number of
-pomodoros. Simply as a gauge, not <a class=nav
-href="https://www.youtube.com/watch?v=4s3bJYHQXYg" target="_blank">a
-motivational tool</a>.
-</p>
-<h3>Proofs</h3>
 <div class=box>
 <p>
 Prove that there is not rational number whose square root is $12$.
 </p>
 <br>
 <p>
-Suppose $m^2 = 12n^2$, where $m$ and $n$ have no common factor. It follows that
+<i>Proof:</i> Suppose $m^2 = 12n^2$, where $m$ and $n$ have no common factor. It follows that
 $m$ must be even, and therefore $n$ must be odd. Let $m = 2r$. Then we have $r^2
 = 3n^2$, so that $r$ is also odd. Let $r = 2s + 1$ and $n = 2t + 1$. Then
 $$4s^2 + 4s + 1 = 3(4t^2 + 4t + 1) = 12t^2 + 12t + 3,$$
 so that
 $$4(s^2 + s - 3t^2 - 3t) = 2.$$
-But this is absurd since $2$ cannot be a multiple of $4$. QED
+But this is absurd since $2$ cannot be a multiple of
+$4$.$\tag*{$\square$}$
 </p>
 </div>
 <p>
@@ -75,24 +45,11 @@ makes sense, something that I've been struggling with in my own proofs. That
 shift from the first sentence to the second is the perfect logical leap &mdash;
 we know that $m$ must be even because otherwise it must be odd and that can't be
 the case since 12 contains a 2 and the equality would break down as an odd
-number can't contain a 2. The beauty of this leap is that it forces the reader
-to think, but not assume anything other than the definitions of odd and even. I
-hope to get this good at proofs by the start of the fall semester, when I'm
-hoping to take real analysis. To do this, I need to work problems from Rudin
-and, more importantly, analyze them every day.
-</p>
-
-<h3>Making Notes</h3>
-<p>
-It's been hard to make notes and study them using Ankis and I think it's mostly
-because I enjoy solving problems rather than recalling different concepts. A
-Caltech alumn's answer to a Quora question reinforced my conviction that study
-time is better spent solving problems and exercising creativity more than
-anythign else. At the very least, I feel less guilty for neglecting Ankis for a
-while. On a more serious note, there are some things I really should Ankis, but
-I don't think any class should have more than 40 cards per semester, reserved
-for the fine points like an edge case of a particular query. The rest
-should just come from problem solving.
+number can't contain a 2. This step forces the reader to think, but not assume
+anything other than the definitions of odd and even. I hope to get this good at
+proofs by the start of the fall semester, when I'm hoping to take real analysis.
+To do this, I need to work problems from Rudin and, more importantly, analyze
+them every day.
 </p>
 </body>
 </html>
