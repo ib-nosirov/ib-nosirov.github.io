@@ -87,16 +87,18 @@ egestas sed.</p>
   <div class="post">
     <h1><a href='posts/2021-10-unrolled.html'>Unrolling Gradient Descent</a></h1>
     <p><time datetime="2021-10-01">October 01, 2021</time></p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Tellus in hac habitasse
-platea dictumst vestibulum. Ultricies lacus sed turpis tincidunt id aliquet
-risus feugiat in. Blandit massa enim nec dui nunc mattis enim ut. Aliquam
-ultrices sagittis orci a scelerisque. Sed vulputate mi sit amet mauris commodo.
-Pellentesque dignissim enim sit amet venenatis urna. Urna id volutpat lacus
-laoreet non curabitur gravida. Cras fermentum odio eu feugiat pretium nibh
-ipsum consequat nisl. Amet porttitor eget dolor morbi non arcu risus quis
-varius. Viverra nam libero justo laoreet sit amet cursus. Sed elementum tempus
-egestas sed.</p>
+    <p>Gradient descent-based algorithms are a class of iterative methods of
+the form $x_{i+1} = x_i - \eta\nabla J(x_i)$ where $x$ is some space of
+vectors, $\eta$ is a scalar step-size, and $J$ is a loss function. The
+step-size, $\eta$, plays a key role in how quickly, or even whether, an
+algorithm converges. This value has been traditionally fixed before runtime,
+but a data-driven technique known as "unrolling" aims to approximate the
+optimal step-size. At a high level, we parameterize the first $n$ iterations of
+gradient descent as a forward-propagation of a neural network. We then
+backward-propagate with respect to $\eta$ until convergence. The resulting
+$\eta$ allows for a much faster convergence in the first $n$ iterations of
+gradient descent.
+  </p>
   </div>
 
   <div class="post">
