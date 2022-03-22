@@ -14,7 +14,7 @@
 </head>
 <body>
 <h1 style="text-align: center">Research Notebook</h1>
-  <div class="post">
+<!--  <div class="post">
     <h1><a href='posts/2021-10-unrolled.html'>Atomic Norm Minimization</a></h1>
     <p><time datetime="2022-05-01">May 01, 2022</time></p>
     <p>Coming soon</p>
@@ -23,7 +23,7 @@
     <h1><a href='posts/2021-10-unrolled.html'>Randomized NLA</a></h1>
     <p><time datetime="2022-04-01">April 01, 2022</time></p>
     <p>Coming soon</p>
-  </div>
+  </div-->
   <div class="post">
     <h1><a href='posts/2021-10-unrolled.html'>Wavelets</a></h1>
     <p><time datetime="2022-03-01">March 01, 2022</time></p>
@@ -45,18 +45,13 @@ varius. Viverra nam libero justo laoreet sit amet cursus. Sed elementum tempus
 egestas sed.</p>
   </div>
   <div class="post">
-    <h1><a href='posts/2021-10-unrolled.html'>2022 (In Progress)</a></h1>
+    <h1><a href='posts/2022-01-research-question.html'>2022 (In Progress)</a></h1>
     <p><time datetime="2022-01-01">January 01, 2022</time></p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Tellus in hac habitasse
-platea dictumst vestibulum. Ultricies lacus sed turpis tincidunt id aliquet
-risus feugiat in. Blandit massa enim nec dui nunc mattis enim ut. Aliquam
-ultrices sagittis orci a scelerisque. Sed vulputate mi sit amet mauris commodo.
-Pellentesque dignissim enim sit amet venenatis urna. Urna id volutpat lacus
-laoreet non curabitur gravida. Cras fermentum odio eu feugiat pretium nibh
-ipsum consequat nisl. Amet porttitor eget dolor morbi non arcu risus quis
-varius. Viverra nam libero justo laoreet sit amet cursus. Sed elementum tempus
-egestas sed.</p>
+    <p>This year, as a primary goal, I hope to complete a thorough first pass of probability,
+analysis, and linear algebra. More specifically, I'd like to feel comfortable making active progress on every problem in Casella, Rudin, and Axler. As a
+secondary goal, I hope to practice learning topics from monographs/papers. Time
+allowing, it would also be nice to pose and begin work on a research question
+in the interpolation paradigm of data science.</p>
   </div>
 
   <div class="post">
@@ -105,13 +100,19 @@ egestas sed.</p>
   </div>
 
   <div class="post">
-    <h1><a href='posts/2021-09-neural-net.html'>Linear Inverse Problem</a></h1>
+    <h1><a href='posts/2021-09-neural-net.html'>Linear Inverse Problems</a></h1>
     <p><time datetime="2021-09-01">September 01, 2021</time></p>
-    <p>Inverse problems are of the form $Ax=y$
-ultrices sagittis orci a scelerisque. Sed vulputate mi sit amet mauris commodo.
-Pellentesque dignissim enim sit amet venenatis urna. Urna id volutpat lacus
-laoreet non curabitur gravida. Cras fermentum odio eu feugiat pretium nibh
-ipsum consequat nisl. Amet porttitor eget dolor morbi non arcu risus quis
+    <p>Consider a linear transformation $A$ applied on a space of vectors $x.$
+The linear transformation maps the space of $x$ to some other space $y.$ To
+determine $y$ given $x$ is a forward problem. To determine $x$ given $y$ is an
+inverse problem. As is commonly introduced in linear algebra, the inverse
+problem can be formulated as a linear system of the form $Ax=y,$ where $A$ is
+of size $m\times n$. When $m>n,$ the system is overdetermined and has
+infinitely many solutions. When $n>m,$ the system is underdetermined and has no
+solutions. Even if a system has no solutions, it is guaranteed to still have a
+pseudoinverse soluton — a solution which minimizes the $\ell_2$ norm. Finally,
+depending on the stability of a solution, we classify inverse problems as
+well-posed or ill-posed.
 </p>
   </div>
 </body>
