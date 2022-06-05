@@ -4,9 +4,9 @@ plugins:
  - jekyll-feed
   - jekyll-remote-theme
 
-title: "Rsearch Nobetook"
-author: "Blog Author"
-description: "My personal blog about ... something"
+title: "Research Notebook"
+author: "Ibrohim Nosirov"
+description: "My personal blog."
 permalink: /:title/
 lang: "en"
 excerpt_separator: "\n\n\n"
