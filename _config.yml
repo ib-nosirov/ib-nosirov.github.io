@@ -1,8 +1,8 @@
-remote_theme: niklasbuschmann/contrast@v2.11
-
 plugins:
  - jekyll-feed
-  - jekyll-remote-theme
+ - jekyll-remote-theme
+
+remote_theme: niklasbuschmann/contrast@v2.11
 
 title: "Research Notebook"
 author: "Ibrohim Nosirov"
@@ -23,4 +23,3 @@ show_sidebar: false        # show a sidebar instead of the usual header
 navigation:                # accepts {file, title, url, icon, sidebaricon}
   - {file: "index.html"}
   - {file: "README.md"}
-
