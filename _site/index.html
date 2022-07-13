@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Home | Research Notebook</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Ibrohim Nosirov">
+<meta name="generator" content="Jekyll v3.9.2">
+<link rel="canonical" href="http://localhost:4000/">
+
+<link rel="stylesheet" href="/assets/css/frame.css">
+
+<link rel="stylesheet" href="/assets/css/classes.css">
+<link rel="alternate" href="/feed.xml" type="application/atom+xml" title="Research Notebook">
+
+
+
+
+
+
+
+<header>
+  <a href="/" class="title">Research Notebook</a>
+  <nav><a aria-label="Home" href="/" class="selected"><span aria-hidden="true">Home</span></a><a aria-label="" href="/assets/katex/" ><span aria-hidden="true"></span></a></nav>
+
+</header>
+
+
+  
+  <article>
+    <header>
+  <h1><a href="/SVD-PCA-and-SVM/">SVD, PCA, and SVM</a></h1><time datetime="2022-07-12T00:00:00-06:00">July 12, 2022</time>
+</header>
+
+    <p>These are some rough notes I am writing for personal use/later revision ONLY.
+None of this information is in any way verified, or correct… probably.</p>
+
+<h2 id="singular-value-decomposition">Singular Value Decomposition</h2>
+<p>This is a good way of representing a matrix that gives us insight into the
+range, null space, rank, and 2-norm condition number. Geometrically, the SVD
+posits that any matrix can be broken down into a rotation, a stretch, and a
+rotation, in that order. Furthermore, for any matrix \(A\), writing out
+\(A^\top A\) and \(AA^\top\) in terms of the SVD of \(A\) yields the
+eigendecomposition of \(A^\top A\) and \(AA^\top\), respectively. Hence, the
+eigenvectors of \(A^\top A\) and \(AA^\top\) make up the \(U\) and \(V\)
+vectors, respectively.</p>
+
+<p>Also, taking the first column of \(U\), the first eigenvalue in \(\Sigma\), and
+the first row of \(V^\top\) gives us a rank 1 matrix (column rank and row rank
+are both 1, since they must be equal) with the greatest variance.</p>
+
+<h2 id="principal-components-analysis">Principal Components Analysis</h2>
+<p>Supposing we have a set of vectors, the PCA algorithm follows:</p>
+<ol>
+  <li>Find mean vector.</li>
+  <li>Create a mean-adjusted (subtract mean vector from every data vector) matrix,
+\(S_{mean}\).</li>
+  <li>Compute a covariance matrix, \(Cov_{i,j} = (S_i-\bar{S})(S_j-\bar{S})\)
+where \(\bar{S}\) is the mean vector and \(S\) is some vector in the set.</li>
+  <li>Compute the SVD of the covariance matrix. The rows of \(V^\top\) are the
+principal axes and the columns of \(U\Sigma\) contain the principal scores.</li>
+</ol>
+
+<h2 id="support-vector-machine-linear">Support Vector Machine (Linear)</h2>
+<p>Support vectors are points in the data that, if removed, would change the
+hyperplane. We use these support vectors in a constrained optimization problem
+to define a separating hyperplane. In fact, we first define to two hyperplanes
+(aka. the margins) such that:</p>
+
+<p>\(wx_i+b \geqslant 1\) when \(y_i = 1,\)</p>
+
+<p>\(wx_i+b \geqslant -1\) when \(y_i = -1.\)</p>
+
+<p>A key feature of these margins, which we incorporate more explicitly below, is
+that no points can exist within the the boundaries of the margins. It follows
+that the median of these hyperplanes is the separating hyperplane with the
+maximum distance between any two members of different groups.</p>
+
+<p>This is done using a constrained optimization problem. It is defined as
+follows:</p>
+
+<p>\(\min f: \frac{1}{2} \|w\|^2\) s.t. \(g: y_i(wx_i)-b=1.\)</p>
+
+<p>We solve this using the Lagrangian Dual Problem.</p>
+
+<h2 id="support-vector-machine-non-linear">Support Vector Machine (Non-Linear)</h2>
+<p>Realize that the dual problem involves computing inner products and that
+kernels are, by definition, inner products in a reproducing kernel Hilbert
+space. Hence, we just compute the feature map of each vector and compute inner
+products just as in the linear case.</p>
+
+
+    <div class="more"><a href="/SVD-PCA-and-SVM/">read more</a></div>
+  </article>
+
+  <article>
+    <header>
+  <h1><a href="/Fast-Kernel-Transform/">Fast Kernel Transform</a></h1><time datetime="2022-06-30T00:00:00-06:00">June 30, 2022</time>
+</header>
+
+    
+
+    <div class="more"><a href="/Fast-Kernel-Transform/">read more</a></div>
+  </article>
+
+  <article>
+    <header>
+  <h1><a href="/Hutch++/">Hutch++: Algorithm for Trace Estimation</a></h1><time datetime="2022-06-10T00:00:00-06:00">June 10, 2022</time>
+</header>
+
+    <h2 id="introduction">Introduction</h2>
+
+
+    <div class="more"><a href="/Hutch++/">read more</a></div>
+  </article>
+
+
+
+
+
+
+
+
+
+</html>
